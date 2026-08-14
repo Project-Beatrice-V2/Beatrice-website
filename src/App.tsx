@@ -47,7 +47,7 @@ export const App: React.FC = () => {
 
   return (
     <LanguageProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <div className="min-h-screen flex flex-col justify-between bg-parchment-base text-ink-primary bg-paper-grain selection:bg-sepia-ink/20 font-sans">
           <Navbar />

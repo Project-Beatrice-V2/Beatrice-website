@@ -8,7 +8,7 @@ import { WaveformPlayer } from '../components/WaveformPlayer';
 import { GithubIcon } from '../components/GithubIcon';
 import { useLanguage } from '../context/LanguageContext';
 import { useGitHubStars } from '../hooks/useGitHubStars';
-import { detectOS, getLatestReleaseUrl } from '../utils/osDetect';
+import { detectOS, getLatestReleaseUrl, getAssetUrl } from '../utils/osDetect';
 import { MODULES, AUDIO_SAMPLES } from '../utils/githubData';
 import { Download, ArrowRight, CheckCircle2, Globe, Star, Loader2, Sliders, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -42,7 +42,7 @@ export const Home: React.FC = () => {
             className="flex items-center justify-center gap-3"
           >
             <img
-              src="/beatrice-logo.png"
+              src={getAssetUrl('/beatrice-logo.png')}
               alt="Project Beatrice V2 Logo"
               className="w-12 h-12 object-contain rounded-xl border border-sepia-ink/15 shadow-sm"
             />

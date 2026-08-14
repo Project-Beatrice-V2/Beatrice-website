@@ -3,6 +3,7 @@ import { BotanicalDivider } from '../components/BotanicalDivider';
 import { useLanguage } from '../context/LanguageContext';
 import { GithubIcon } from '../components/GithubIcon';
 import { CONTRIBUTORS, ORIGINAL_WEBSITE_URL } from '../utils/githubData';
+import { getAssetUrl } from '../utils/osDetect';
 import { Shield, Users, Code, ExternalLink, UserCheck } from 'lucide-react';
 
 export const About: React.FC = () => {
@@ -79,7 +80,7 @@ export const About: React.FC = () => {
                   <div className="flex items-center gap-3">
                     {c.avatarUrl ? (
                       <img
-                        src={c.avatarUrl}
+                        src={getAssetUrl(c.avatarUrl)}
                         alt={c.name}
                         className="w-10 h-10 rounded-full border border-sepia-ink/20 object-cover"
                       />

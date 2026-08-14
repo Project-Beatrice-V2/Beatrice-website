@@ -24,3 +24,11 @@ export function getLatestReleaseUrl(repoName: string): string {
 export function getOrgRepoUrl(repoName: string): string {
   return `https://github.com/Project-Beatrice-V2/${repoName}`;
 }
+
+export function getAssetUrl(path: string): string {
+  if (path.startsWith('http://') || path.startsWith('https://')) return path;
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
+  return `${cleanBase}${cleanPath}`;
+}

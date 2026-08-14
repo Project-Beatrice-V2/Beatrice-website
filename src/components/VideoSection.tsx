@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { getAssetUrl } from '../utils/osDetect';
 import { Play, Pause, Volume2, VolumeX, Maximize, RotateCcw, Activity } from 'lucide-react';
 
 interface VideoSectionProps {
@@ -15,6 +16,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
   posterImage = 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1200&auto=format&fit=crop',
   videoSrc = '/media/pipeline-demo.mp4',
 }) => {
+  const resolvedVideoSrc = getAssetUrl(videoSrc);
   const { t } = useLanguage();
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [hasStarted, setHasStarted] = useState<boolean>(false);
@@ -141,7 +143,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
           {/* Native HTML5 Video Element */}
           <video
             ref={videoRef}
-            src={videoSrc}
+            src={resolvedVideoSrc}
             poster={posterImage}
             playsInline
             loop

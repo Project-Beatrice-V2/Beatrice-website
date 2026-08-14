@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { getAssetUrl } from '../utils/osDetect';
 
 interface HerbariumLogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -18,11 +19,13 @@ export const HerbariumLogo: React.FC<HerbariumLogoProps> = ({
     lg: { textMain: 'text-4xl md:text-5xl', textSub: 'text-sm tracking-widest', imgSize: 'w-16 h-16 md:w-20 md:h-20' },
   };
 
+  const logoSrc = getAssetUrl('/beatrice-logo.png');
+
   if (useImageOnly) {
     return (
       <Link to="/" className="group inline-block select-none">
         <img
-          src="/beatrice-logo.png"
+          src={logoSrc}
           alt="Project Beatrice V2 Logo"
           className={`rounded-lg border border-sepia-ink/30 shadow-ink-sm group-hover:scale-105 transition-transform duration-300 object-cover ${sizeClasses[size].imgSize}`}
         />
@@ -35,7 +38,7 @@ export const HerbariumLogo: React.FC<HerbariumLogoProps> = ({
       {/* Official Antique Botanical Logo Thumbnail */}
       <div className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
         <img
-          src="/beatrice-logo.png"
+          src={logoSrc}
           alt="Project Beatrice V2 Official Botanical Logo"
           className={`rounded-lg border border-sepia-ink/30 shadow-ink-sm object-cover ${sizeClasses[size].imgSize}`}
         />
