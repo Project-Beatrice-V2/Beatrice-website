@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const STARS_CACHE_KEY = 'beatrice_github_stars_cache';
+const STARS_CACHE_KEY = 'beatrice_github_stars_cache_v2';
 
 interface StarsCache {
   [repo: string]: {
@@ -51,10 +51,15 @@ export function useGitHubStars(repoFullName: string, initialStars?: number): num
             } catch (e) {
               // ignore storage errors
             }
+            return;
           }
         }
       } catch (err) {
-        // Fallback to initial or null
+        // Fallback to initialStars
+      }
+
+      if (isMounted && initialStars !== undefined) {
+        setStars(initialStars);
       }
     }
 
@@ -65,5 +70,5 @@ export function useGitHubStars(repoFullName: string, initialStars?: number): num
     };
   }, [repoFullName, initialStars]);
 
-  return stars;
+  return stars ?? initialStars ?? null;
 }

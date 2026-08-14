@@ -101,11 +101,8 @@ const ModuleCard: React.FC<{ module: RepositoryModule; categoryMap: Record<strin
   categoryMap,
 }) => {
   const { t } = useLanguage();
-  const repoFullName = module.isHuggingFace
-    ? 'SatiricalGuru/beatrice-voice-models'
-    : `Project-Beatrice-V2/${module.repoName}`;
-
-  const liveStars = useGitHubStars(repoFullName);
+  const repoFullName = `Project-Beatrice-V2/${module.repoName}`;
+  const liveStars = useGitHubStars(repoFullName, module.stars);
   const localizedDesc = t.modulesPage.descriptions[module.id] || module.description;
 
   return (

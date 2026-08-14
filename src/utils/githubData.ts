@@ -50,7 +50,7 @@ export const MODULES: RepositoryModule[] = [
   {
     id: 'hf-models',
     name: 'Beatrice Pre-Trained Voice Models Hub',
-    repoName: 'SatiricalGuru/beatrice-voice-models',
+    repoName: 'Beatrice-voice-models',
     category: 'Model Hub',
     platform: 'Cross-platform',
     acceleration: 'Hugging Face Hub CDN',

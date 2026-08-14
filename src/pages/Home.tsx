@@ -306,11 +306,8 @@ export const Home: React.FC = () => {
 };
 
 const HomeFeaturedModuleCard: React.FC<{ module: any }> = ({ module }) => {
-  const repoFullName = module.isHuggingFace
-    ? 'SatiricalGuru/beatrice-voice-models'
-    : `Project-Beatrice-V2/${module.repoName}`;
-
-  const liveStars = useGitHubStars(repoFullName);
+  const repoFullName = `Project-Beatrice-V2/${module.repoName}`;
+  const liveStars = useGitHubStars(repoFullName, module.stars);
 
   return (
     <motion.div
