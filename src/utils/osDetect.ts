@@ -17,8 +17,35 @@ export function detectOS(): OperatingSystem {
   return 'unknown';
 }
 
+export function getDirectDownloadUrl(repoName: string, os?: 'macOS' | 'Windows'): string {
+  switch (repoName) {
+    case 'Beatrice-voicechanger-macos':
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-macos/releases/download/v2.0.0/Beatrice.Voice.Changer-2.0.0-arm64.dmg';
+    case 'Beatrice-voicechanger-windows':
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-windows/releases/download/v2.0.0/Beatrice-Voice-Changer-Setup-2.0.0.exe';
+    case 'Beatrice-trainer-macos':
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-trainer-macos/archive/refs/heads/main.zip';
+    case 'Beatrice-trainer-windows':
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-trainer-windows/archive/refs/heads/main.zip';
+    case 'Beatrice-dataset-webui-macos':
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-dataset-webui-macos/archive/refs/heads/main.zip';
+    case 'Beatrice-dataset-webui-windows':
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-dataset-webui-windows/archive/refs/heads/main.zip';
+    case 'Beatrice-voice-models':
+    case 'SatiricalGuru/beatrice-voice-models':
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-voice-models/archive/refs/heads/main.zip';
+    case 'Beatrice-colab':
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-colab/archive/refs/heads/main.zip';
+    default:
+      if (os === 'Windows') {
+        return 'https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-windows/releases/download/v2.0.0/Beatrice-Voice-Changer-Setup-2.0.0.exe';
+      }
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-macos/releases/download/v2.0.0/Beatrice.Voice.Changer-2.0.0-arm64.dmg';
+  }
+}
+
 export function getLatestReleaseUrl(repoName: string): string {
-  return `https://github.com/Project-Beatrice-V2/${repoName}/releases/latest`;
+  return getDirectDownloadUrl(repoName);
 }
 
 export function getOrgRepoUrl(repoName: string): string {

@@ -56,15 +56,15 @@ export const MODULES: RepositoryModule[] = [
     acceleration: 'Hugging Face Hub CDN',
     description: 'Official library of high-fidelity pre-trained Beatrice voice models ready for direct download and instant live streaming.',
     stars: 840,
-    releaseUrl: HF_MODELS_URL,
-    repoUrl: HF_MODELS_URL,
+    releaseUrl: getLatestReleaseUrl('Beatrice-voice-models'),
+    repoUrl: getOrgRepoUrl('Beatrice-voice-models'),
     requirements: {
       chipGpu: 'Compatible with all Beatrice Voice Changer clients',
       osVersion: 'macOS & Windows',
       ram: 'Direct TOML / BIN load'
     },
     featured: true,
-    isHuggingFace: true,
+    isHuggingFace: false,
   },
   {
     id: 'trainer-mac',
@@ -127,7 +127,7 @@ export const MODULES: RepositoryModule[] = [
     acceleration: 'Free Google Colab / Kaggle GPU',
     description: 'Pre-configured Google Colab and Kaggle Jupyter notebooks for training custom Beatrice voice models using free cloud GPUs.',
     stars: 412,
-    releaseUrl: getOrgRepoUrl('Beatrice-colab'),
+    releaseUrl: getLatestReleaseUrl('Beatrice-colab'),
     repoUrl: getOrgRepoUrl('Beatrice-colab'),
     requirements: {
       chipGpu: 'Cloud T4 / V100 / A100 GPU (Google Colab)',
@@ -145,7 +145,7 @@ export const PRETRAINED_MODELS: PretrainedVoiceModel[] = [
     language: 'English (US)',
     gender: 'Male',
     sampleRate: '48kHz High-Res (5000 Steps)',
-    downloadUrl: `${HF_MODELS_URL}/tree/main/trump`,
+    downloadUrl: 'https://github.com/Project-Beatrice-V2/Beatrice-voice-models/archive/refs/heads/main.zip',
     description: 'Pre-trained Trump voice model checkpoint (5000 steps) with phone extractor, pitch estimator, and waveform generator binaries.',
     tags: ['Trump', '5000 Steps', 'TOML Manifest', '48kHz']
   }
