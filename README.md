@@ -6,10 +6,10 @@
 
 **The official modern web portal, documentation hub, and interactive showcase for the Project Beatrice V2 real-time neural voice conversion ecosystem.**
 
-[![Website Live](https://img.shields.io/badge/Website-Live_Production-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice-v2.github.io/website/)
+[![Website Live](https://img.shields.io/badge/Website-Live_Production-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice-v2.github.io/Beatrice-website/)
 [![GitHub Org](https://img.shields.io/badge/GitHub-Project--Beatrice--V2-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Project-Beatrice-V2)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
-[![Deploy to Pages](https://img.shields.io/github/actions/workflow/status/Project-Beatrice-V2/website/deploy.yml?branch=main&label=GitHub%20Pages&style=for-the-badge)](https://github.com/Project-Beatrice-V2/website/actions)
+[![Deploy to Pages](https://img.shields.io/github/actions/workflow/status/Project-Beatrice-V2/Beatrice-website/deploy.yml?branch=main&label=GitHub%20Pages&style=for-the-badge)](https://github.com/Project-Beatrice-V2/Beatrice-website/actions)
 
 </div>
 
@@ -40,8 +40,8 @@ This repository powers the official web application for **[Project Beatrice V2](
 
 ```bash
 # Clone repository
-git clone https://github.com/Project-Beatrice-V2/website.git
-cd website
+git clone https://github.com/Project-Beatrice-V2/Beatrice-website.git
+cd Beatrice-website
 
 # Install dependencies
 npm install
