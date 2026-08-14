@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/beatrice-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Project Beatrice V2 — Open-Source Neural Voice Conversion Ecosystem</title>
+    <meta name="title" content="Project Beatrice V2 — Open-Source Neural Voice Conversion Ecosystem" />
+    <meta name="description" content="Project Beatrice V2 is an open-source, end-to-end neural voice conversion and model training ecosystem featuring <50ms real-time inference, Apple Silicon MPS and NVIDIA CUDA acceleration." />
+    <meta name="keywords" content="voice changer, neural voice conversion, AI voice, real-time voice changer, Project Beatrice, voice training, MPS, CUDA, open source" />
+    <meta name="author" content="Project Beatrice V2 Team" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://project-beatrice-v2.github.io/" />
+    <meta property="og:title" content="Project Beatrice V2 — Neural Voice Conversion Ecosystem" />
+    <meta property="og:description" content="Ultra-low latency real-time voice conversion & local training. Built for macOS (Metal/MPS) and Windows (CUDA/DirectML)." />
+    <meta property="og:image" content="https://project-beatrice-v2.github.io/og-preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://project-beatrice-v2.github.io/" />
+    <meta property="twitter:title" content="Project Beatrice V2 — Neural Voice Conversion Ecosystem" />
+    <meta property="twitter:description" content="Ultra-low latency real-time voice conversion & local training ecosystem." />
+    <meta property="twitter:image" content="https://project-beatrice-v2.github.io/og-preview.png" />
+
+    <!-- Google Fonts: Cormorant Garamond, Playfair Display, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- GitHub Pages SPA Router Redirection Handler -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+  </head>
+  <body class="bg-parchment-base text-ink-primary font-sans antialiased selection:bg-sepia-ink/20 selection:text-ink-primary min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
