@@ -9,6 +9,7 @@ interface InkButtonProps extends HTMLMotionProps<'button'> {
   icon?: React.ReactNode;
   asLink?: string;
   external?: boolean;
+  download?: boolean | string;
 }
 
 export const InkButton: React.FC<InkButtonProps> = ({
@@ -18,6 +19,7 @@ export const InkButton: React.FC<InkButtonProps> = ({
   icon,
   asLink,
   external,
+  download,
   className = '',
   ...props
 }) => {
@@ -49,11 +51,20 @@ export const InkButton: React.FC<InkButtonProps> = ({
   );
 
   if (asLink) {
+    const isDirectDownload = Boolean(
+      download ||
+      asLink.endsWith('.dmg') ||
+      asLink.endsWith('.exe') ||
+      asLink.endsWith('.zip') ||
+      asLink.includes('/archive/')
+    );
+
     return (
       <motion.a
         href={asLink}
-        target={external ? '_blank' : undefined}
+        target={isDirectDownload ? undefined : (external ? '_blank' : undefined)}
         rel={external ? 'noopener noreferrer' : undefined}
+        download={isDirectDownload ? '' : undefined}
         className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

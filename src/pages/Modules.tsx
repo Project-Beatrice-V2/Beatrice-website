@@ -167,8 +167,7 @@ const ModuleCard: React.FC<{ module: RepositoryModule; categoryMap: Record<strin
       <div className="pt-4 border-t border-sepia-ink/15 flex items-center justify-between gap-2">
         <a
           href={module.releaseUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          download
           className="inline-flex items-center gap-1.5 font-sans text-xs font-semibold text-sepia-ink hover:text-sepia-deep"
         >
           <span>{t.common.latestRelease}</span>

@@ -109,8 +109,7 @@ export const Showcase: React.FC = () => {
                 <span className="font-mono text-[11px] text-ink-muted">By {model.author}</span>
                 <a
                   href={model.downloadUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  download
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sepia-ink text-parchment-light text-xs font-sans font-semibold hover:bg-sepia-deep transition-colors shadow-ink-sm"
                 >
                   <Download className="w-3.5 h-3.5" />
