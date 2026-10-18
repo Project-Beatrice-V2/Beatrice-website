@@ -17,12 +17,19 @@ export function detectOS(): OperatingSystem {
   return 'unknown';
 }
 
+// Bump these when a new release is published.
+const MACOS_VERSION = '2.0.2';
+const WINDOWS_VERSION = '2.0.0';
+
+const MACOS_DMG_URL = `https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-macos/releases/download/v${MACOS_VERSION}/Beatrice.Voice.Changer-${MACOS_VERSION}-arm64.dmg`;
+const WINDOWS_SETUP_URL = `https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-windows/releases/download/v${WINDOWS_VERSION}/Beatrice-Voice-Changer-Setup-${WINDOWS_VERSION}.exe`;
+
 export function getDirectDownloadUrl(repoName: string, os?: 'macOS' | 'Windows'): string {
   switch (repoName) {
     case 'Beatrice-voicechanger-macos':
-      return 'https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-macos/releases/download/v2.0.0/Beatrice.Voice.Changer-2.0.0-arm64.dmg';
+      return MACOS_DMG_URL;
     case 'Beatrice-voicechanger-windows':
-      return 'https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-windows/releases/download/v2.0.0/Beatrice-Voice-Changer-Setup-2.0.0.exe';
+      return WINDOWS_SETUP_URL;
     case 'Beatrice-trainer-macos':
       return 'https://github.com/Project-Beatrice-V2/Beatrice-trainer-macos/archive/refs/heads/main.zip';
     case 'Beatrice-trainer-windows':
@@ -38,9 +45,9 @@ export function getDirectDownloadUrl(repoName: string, os?: 'macOS' | 'Windows')
       return 'https://github.com/Project-Beatrice-V2/Beatrice-colab/archive/refs/heads/main.zip';
     default:
       if (os === 'Windows') {
-        return 'https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-windows/releases/download/v2.0.0/Beatrice-Voice-Changer-Setup-2.0.0.exe';
+        return WINDOWS_SETUP_URL;
       }
-      return 'https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-macos/releases/download/v2.0.0/Beatrice.Voice.Changer-2.0.0-arm64.dmg';
+      return MACOS_DMG_URL;
   }
 }
 
