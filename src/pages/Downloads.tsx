@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { InkButton } from '../components/InkButton';
 import { BotanicalDivider } from '../components/BotanicalDivider';
 import { useLanguage } from '../context/LanguageContext';
-import { detectOS, getOrgRepoUrl, getIntelMacDownloadUrl } from '../utils/osDetect';
+import { detectOS, getOrgRepoUrl } from '../utils/osDetect';
 import { MODULES } from '../utils/githubData';
 import { Download, Cpu, HardDrive, CheckCircle2, ChevronDown, ChevronUp, CloudLightning, Terminal } from 'lucide-react';
 
@@ -132,9 +132,9 @@ export const Downloads: React.FC = () => {
                 </InkButton>
 
                 {mod.repoName === 'Beatrice-voicechanger-macos' && (
-                  <a href={getIntelMacDownloadUrl()} download className="block text-center font-mono text-xs font-semibold text-sepia-ink hover:text-sepia-deep pt-1">
-                    {t.common.intelMac}
-                  </a>
+                  <p className="block text-center font-mono text-xs text-ink-muted pt-1">
+                    {t.common.appleSiliconOnly}
+                  </p>
                 )}
 
                 <a

@@ -77,7 +77,7 @@ interface Translations {
   common: {
     downloadMac: string;
     downloadWin: string;
-    intelMac: string;
+    appleSiliconOnly: string;
     githubOrg: string;
     supportedLangs: string;
     learnMore: string;
@@ -261,7 +261,7 @@ const translations: Record<SupportedLanguage, Translations> = {
     common: {
       downloadMac: 'Download for macOS (MPS)',
       downloadWin: 'Download for Windows (CUDA)',
-      intelMac: 'Intel Mac? Download the Intel version',
+      appleSiliconOnly: 'macOS version requires Apple Silicon (M1–M4). Intel Macs are not supported.',
       githubOrg: 'GitHub Org',
       supportedLangs: 'English • 日本語 (Japanese) • 中文 (Chinese)',
       learnMore: 'Learn More',
@@ -635,7 +635,7 @@ const translations: Record<SupportedLanguage, Translations> = {
     common: {
       downloadMac: 'macOS版をダウンロード (MPS)',
       downloadWin: 'Windows版をダウンロード (CUDA)',
-      intelMac: 'Intel Macの方はこちら（Intel版）',
+      appleSiliconOnly: 'macOS版はApple Silicon（M1〜M4）専用です。Intel Macには対応していません。',
       githubOrg: 'GitHub 組織',
       supportedLangs: '英語 • 日本語 • 中国語 対応',
       learnMore: '詳細を見る',
@@ -1009,7 +1009,7 @@ const translations: Record<SupportedLanguage, Translations> = {
     common: {
       downloadMac: '下载 macOS 版 (MPS)',
       downloadWin: '下载 Windows 版 (CUDA)',
-      intelMac: 'Intel Mac？下载 Intel 版',
+      appleSiliconOnly: 'macOS 版仅支持 Apple Silicon（M1–M4），不支持 Intel Mac。',
       githubOrg: 'GitHub 仓库',
       supportedLangs: '中文 • English • 日本語 多语言支持',
       learnMore: '了解更多',

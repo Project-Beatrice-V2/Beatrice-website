@@ -23,7 +23,7 @@ export const MODULES: RepositoryModule[] = [
     releaseUrl: getLatestReleaseUrl('Beatrice-voicechanger-macos'),
     repoUrl: getOrgRepoUrl('Beatrice-voicechanger-macos'),
     requirements: {
-      chipGpu: 'Apple Silicon M1/M2/M3/M4 or Intel Mac with AMD GPU',
+      chipGpu: 'Apple Silicon M1/M2/M3/M4 (Intel Macs not supported)',
       osVersion: 'macOS 12.0 (Monterey) or later',
       ram: '8 GB unified memory minimum (16 GB recommended)'
     },

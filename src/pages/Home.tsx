@@ -8,7 +8,7 @@ import { WaveformPlayer } from '../components/WaveformPlayer';
 import { GithubIcon } from '../components/GithubIcon';
 import { useLanguage } from '../context/LanguageContext';
 import { useGitHubStars } from '../hooks/useGitHubStars';
-import { detectOS, getLatestReleaseUrl, getAssetUrl, getIntelMacDownloadUrl } from '../utils/osDetect';
+import { detectOS, getLatestReleaseUrl, getAssetUrl } from '../utils/osDetect';
 import { MODULES, AUDIO_SAMPLES } from '../utils/githubData';
 import { Download, ArrowRight, CheckCircle2, Globe, Star, Loader2, Sliders, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -117,9 +117,9 @@ export const Home: React.FC = () => {
             </InkButton>
           </motion.div>
 
-          <a href={getIntelMacDownloadUrl()} download className="block text-center font-mono text-xs font-semibold text-sepia-ink hover:text-sepia-deep pt-1">
-            {t.common.intelMac}
-          </a>
+          <p className="block text-center font-mono text-xs text-ink-muted pt-1">
+            {t.common.appleSiliconOnly}
+          </p>
 
           {/* Platform Compatibility Pills */}
           <motion.div
