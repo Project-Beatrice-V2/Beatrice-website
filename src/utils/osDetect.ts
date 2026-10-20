@@ -18,7 +18,7 @@ export function detectOS(): OperatingSystem {
 }
 
 // Bump these when a new release is published.
-const MACOS_VERSION = '2.1.0';
+const MACOS_VERSION = '2.1.1';
 const WINDOWS_VERSION = '2.0.0';
 
 const MACOS_DMG_URL = `https://github.com/Project-Beatrice-V2/Beatrice-voicechanger-macos/releases/download/v${MACOS_VERSION}/Beatrice.Voice.Changer-${MACOS_VERSION}-arm64.dmg`;
