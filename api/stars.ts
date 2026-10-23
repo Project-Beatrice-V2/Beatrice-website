@@ -1,4 +1,5 @@
 // GET /api/stars — total GitHub stars across Beatrice's repositories.
+// GET /api/stars?format=shields — the same total as a shields.io endpoint badge.
 // Runs on Vercel's edge; the CDN caches the answer for an hour so visitors
 // never hit GitHub's rate limit. Set GITHUB_TOKEN to raise that limit.
 export const config = { runtime: 'edge' };
@@ -18,7 +19,8 @@ async function gh(path: string, token?: string) {
   return res.json();
 }
 
-export default async function handler(): Promise<Response> {
+export default async function handler(req?: Request): Promise<Response> {
+  const shields = req ? new URL(req.url).searchParams.get('format') === 'shields' : false;
   const token = (globalThis as { process?: { env?: Record<string, string | undefined> } }).process?.env?.GITHUB_TOKEN;
   try {
     const [repos, orgRepos] = await Promise.all([
@@ -28,7 +30,10 @@ export default async function handler(): Promise<Response> {
     const all = [...repos, ...orgRepos] as { full_name: string; stargazers_count: number }[];
     const unique = new Map(all.map((r) => [r.full_name, r.stargazers_count]));
     const total = [...unique.values()].reduce((a, b) => a + b, 0);
-    return new Response(JSON.stringify({ total, repos: Object.fromEntries(unique), updatedAt: new Date().toISOString() }), {
+    const body = shields
+      ? { schemaVersion: 1, label: 'stars', message: String(total), color: 'white', labelColor: '000000', namedLogo: 'github', logoColor: 'white' }
+      : { total, repos: Object.fromEntries(unique), updatedAt: new Date().toISOString() };
+    return new Response(JSON.stringify(body), {
       headers: {
         'Content-Type': 'application/json',
         'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
