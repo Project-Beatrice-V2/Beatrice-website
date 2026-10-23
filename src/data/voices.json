@@ -1,0 +1,978 @@
+[
+  {
+    "id": "jvs-0",
+    "model": "jvs",
+    "name": "Aether",
+    "code": "JVS-001",
+    "gender": "male",
+    "pitchHz": 49.875,
+    "avatar": "voices/jvs-001.svg"
+  },
+  {
+    "id": "jvs-1",
+    "model": "jvs",
+    "name": "Lumine",
+    "code": "JVS-002",
+    "gender": "female",
+    "pitchHz": 56.625,
+    "avatar": "voices/jvs-002.svg"
+  },
+  {
+    "id": "jvs-2",
+    "model": "jvs",
+    "name": "Venti",
+    "code": "JVS-003",
+    "gender": "male",
+    "pitchHz": 50.875,
+    "avatar": "voices/jvs-003.svg"
+  },
+  {
+    "id": "jvs-3",
+    "model": "jvs",
+    "name": "Raiden",
+    "code": "JVS-004",
+    "gender": "female",
+    "pitchHz": 59.125,
+    "avatar": "voices/jvs-004.svg"
+  },
+  {
+    "id": "jvs-4",
+    "model": "jvs",
+    "name": "Zhongli",
+    "code": "JVS-005",
+    "gender": "male",
+    "pitchHz": 49.25,
+    "avatar": "voices/jvs-005.svg"
+  },
+  {
+    "id": "jvs-5",
+    "model": "jvs",
+    "name": "Diluc",
+    "code": "JVS-006",
+    "gender": "male",
+    "pitchHz": 43.5,
+    "avatar": "voices/jvs-006.svg"
+  },
+  {
+    "id": "jvs-6",
+    "model": "jvs",
+    "name": "Nahida",
+    "code": "JVS-007",
+    "gender": "female",
+    "pitchHz": 56.125,
+    "avatar": "voices/jvs-007.svg"
+  },
+  {
+    "id": "jvs-7",
+    "model": "jvs",
+    "name": "Furina",
+    "code": "JVS-008",
+    "gender": "female",
+    "pitchHz": 57.625,
+    "avatar": "voices/jvs-008.svg"
+  },
+  {
+    "id": "jvs-8",
+    "model": "jvs",
+    "name": "Kaeya",
+    "code": "JVS-009",
+    "gender": "male",
+    "pitchHz": 46.875,
+    "avatar": "voices/jvs-009.svg"
+  },
+  {
+    "id": "jvs-9",
+    "model": "jvs",
+    "name": "Jean",
+    "code": "JVS-010",
+    "gender": "female",
+    "pitchHz": 61.125,
+    "avatar": "voices/jvs-010.svg"
+  },
+  {
+    "id": "jvs-10",
+    "model": "jvs",
+    "name": "Albedo",
+    "code": "JVS-011",
+    "gender": "male",
+    "pitchHz": 51.125,
+    "avatar": "voices/jvs-011.svg"
+  },
+  {
+    "id": "jvs-11",
+    "model": "jvs",
+    "name": "Bennett",
+    "code": "JVS-012",
+    "gender": "male",
+    "pitchHz": 46.5,
+    "avatar": "voices/jvs-012.svg"
+  },
+  {
+    "id": "jvs-12",
+    "model": "jvs",
+    "name": "Razor",
+    "code": "JVS-013",
+    "gender": "male",
+    "pitchHz": 50.25,
+    "avatar": "voices/jvs-013.svg"
+  },
+  {
+    "id": "jvs-13",
+    "model": "jvs",
+    "name": "Lisa",
+    "code": "JVS-014",
+    "gender": "female",
+    "pitchHz": 60.875,
+    "avatar": "voices/jvs-014.svg"
+  },
+  {
+    "id": "jvs-14",
+    "model": "jvs",
+    "name": "Amber",
+    "code": "JVS-015",
+    "gender": "female",
+    "pitchHz": 59.625,
+    "avatar": "voices/jvs-015.svg"
+  },
+  {
+    "id": "jvs-15",
+    "model": "jvs",
+    "name": "Eula",
+    "code": "JVS-016",
+    "gender": "female",
+    "pitchHz": 55.25,
+    "avatar": "voices/jvs-016.svg"
+  },
+  {
+    "id": "jvs-16",
+    "model": "jvs",
+    "name": "Mona",
+    "code": "JVS-017",
+    "gender": "female",
+    "pitchHz": 56.5,
+    "avatar": "voices/jvs-017.svg"
+  },
+  {
+    "id": "jvs-17",
+    "model": "jvs",
+    "name": "Klee",
+    "code": "JVS-018",
+    "gender": "female",
+    "pitchHz": 56.875,
+    "avatar": "voices/jvs-018.svg"
+  },
+  {
+    "id": "jvs-18",
+    "model": "jvs",
+    "name": "Sucrose",
+    "code": "JVS-019",
+    "gender": "female",
+    "pitchHz": 58,
+    "avatar": "voices/jvs-019.svg"
+  },
+  {
+    "id": "jvs-19",
+    "model": "jvs",
+    "name": "Xiao",
+    "code": "JVS-020",
+    "gender": "male",
+    "pitchHz": 48.875,
+    "avatar": "voices/jvs-020.svg"
+  },
+  {
+    "id": "jvs-20",
+    "model": "jvs",
+    "name": "Xingqiu",
+    "code": "JVS-021",
+    "gender": "male",
+    "pitchHz": 44.875,
+    "avatar": "voices/jvs-021.svg"
+  },
+  {
+    "id": "jvs-21",
+    "model": "jvs",
+    "name": "Chongyun",
+    "code": "JVS-022",
+    "gender": "male",
+    "pitchHz": 46.625,
+    "avatar": "voices/jvs-022.svg"
+  },
+  {
+    "id": "jvs-22",
+    "model": "jvs",
+    "name": "Ayato",
+    "code": "JVS-023",
+    "gender": "male",
+    "pitchHz": 47.25,
+    "avatar": "voices/jvs-023.svg"
+  },
+  {
+    "id": "jvs-23",
+    "model": "jvs",
+    "name": "Noelle",
+    "code": "JVS-024",
+    "gender": "female",
+    "pitchHz": 59.125,
+    "avatar": "voices/jvs-024.svg"
+  },
+  {
+    "id": "jvs-24",
+    "model": "jvs",
+    "name": "Fischl",
+    "code": "JVS-025",
+    "gender": "female",
+    "pitchHz": 57.375,
+    "avatar": "voices/jvs-025.svg"
+  },
+  {
+    "id": "jvs-25",
+    "model": "jvs",
+    "name": "Barbara",
+    "code": "JVS-026",
+    "gender": "female",
+    "pitchHz": 59.75,
+    "avatar": "voices/jvs-026.svg"
+  },
+  {
+    "id": "jvs-26",
+    "model": "jvs",
+    "name": "Rosaria",
+    "code": "JVS-027",
+    "gender": "female",
+    "pitchHz": 58.375,
+    "avatar": "voices/jvs-027.svg"
+  },
+  {
+    "id": "jvs-27",
+    "model": "jvs",
+    "name": "Itto",
+    "code": "JVS-028",
+    "gender": "male",
+    "pitchHz": 46.125,
+    "avatar": "voices/jvs-028.svg"
+  },
+  {
+    "id": "jvs-28",
+    "model": "jvs",
+    "name": "Diona",
+    "code": "JVS-029",
+    "gender": "female",
+    "pitchHz": 57.125,
+    "avatar": "voices/jvs-029.svg"
+  },
+  {
+    "id": "jvs-29",
+    "model": "jvs",
+    "name": "Ganyu",
+    "code": "JVS-030",
+    "gender": "female",
+    "pitchHz": 59.25,
+    "avatar": "voices/jvs-030.svg"
+  },
+  {
+    "id": "jvs-30",
+    "model": "jvs",
+    "name": "Kazuha",
+    "code": "JVS-031",
+    "gender": "male",
+    "pitchHz": 47,
+    "avatar": "voices/jvs-031.svg"
+  },
+  {
+    "id": "jvs-31",
+    "model": "jvs",
+    "name": "Heizou",
+    "code": "JVS-032",
+    "gender": "male",
+    "pitchHz": 52.625,
+    "avatar": "voices/jvs-032.svg"
+  },
+  {
+    "id": "jvs-32",
+    "model": "jvs",
+    "name": "Gorou",
+    "code": "JVS-033",
+    "gender": "male",
+    "pitchHz": 49.75,
+    "avatar": "voices/jvs-033.svg"
+  },
+  {
+    "id": "jvs-33",
+    "model": "jvs",
+    "name": "Thoma",
+    "code": "JVS-034",
+    "gender": "male",
+    "pitchHz": 46.375,
+    "avatar": "voices/jvs-034.svg"
+  },
+  {
+    "id": "jvs-34",
+    "model": "jvs",
+    "name": "Keqing",
+    "code": "JVS-035",
+    "gender": "female",
+    "pitchHz": 56.375,
+    "avatar": "voices/jvs-035.svg"
+  },
+  {
+    "id": "jvs-35",
+    "model": "jvs",
+    "name": "Hu Tao",
+    "code": "JVS-036",
+    "gender": "female",
+    "pitchHz": 59.25,
+    "avatar": "voices/jvs-036.svg"
+  },
+  {
+    "id": "jvs-36",
+    "model": "jvs",
+    "name": "Cyno",
+    "code": "JVS-037",
+    "gender": "male",
+    "pitchHz": 44.875,
+    "avatar": "voices/jvs-037.svg"
+  },
+  {
+    "id": "jvs-37",
+    "model": "jvs",
+    "name": "Qiqi",
+    "code": "JVS-038",
+    "gender": "female",
+    "pitchHz": 57.625,
+    "avatar": "voices/jvs-038.svg"
+  },
+  {
+    "id": "jvs-38",
+    "model": "jvs",
+    "name": "Shenhe",
+    "code": "JVS-039",
+    "gender": "female",
+    "pitchHz": 58.75,
+    "avatar": "voices/jvs-039.svg"
+  },
+  {
+    "id": "jvs-39",
+    "model": "jvs",
+    "name": "Yelan",
+    "code": "JVS-040",
+    "gender": "female",
+    "pitchHz": 57.875,
+    "avatar": "voices/jvs-040.svg"
+  },
+  {
+    "id": "jvs-40",
+    "model": "jvs",
+    "name": "Tighnari",
+    "code": "JVS-041",
+    "gender": "male",
+    "pitchHz": 49.75,
+    "avatar": "voices/jvs-041.svg"
+  },
+  {
+    "id": "jvs-41",
+    "model": "jvs",
+    "name": "Alhaitham",
+    "code": "JVS-042",
+    "gender": "male",
+    "pitchHz": 48.125,
+    "avatar": "voices/jvs-042.svg"
+  },
+  {
+    "id": "jvs-42",
+    "model": "jvs",
+    "name": "Ningguang",
+    "code": "JVS-043",
+    "gender": "female",
+    "pitchHz": 56.375,
+    "avatar": "voices/jvs-043.svg"
+  },
+  {
+    "id": "jvs-43",
+    "model": "jvs",
+    "name": "Kaveh",
+    "code": "JVS-044",
+    "gender": "male",
+    "pitchHz": 48,
+    "avatar": "voices/jvs-044.svg"
+  },
+  {
+    "id": "jvs-44",
+    "model": "jvs",
+    "name": "Mika",
+    "code": "JVS-045",
+    "gender": "male",
+    "pitchHz": 48.875,
+    "avatar": "voices/jvs-045.svg"
+  },
+  {
+    "id": "jvs-45",
+    "model": "jvs",
+    "name": "Freminet",
+    "code": "JVS-046",
+    "gender": "male",
+    "pitchHz": 48.75,
+    "avatar": "voices/jvs-046.svg"
+  },
+  {
+    "id": "jvs-46",
+    "model": "jvs",
+    "name": "Lyney",
+    "code": "JVS-047",
+    "gender": "male",
+    "pitchHz": 49,
+    "avatar": "voices/jvs-047.svg"
+  },
+  {
+    "id": "jvs-47",
+    "model": "jvs",
+    "name": "Wriothesley",
+    "code": "JVS-048",
+    "gender": "male",
+    "pitchHz": 45,
+    "avatar": "voices/jvs-048.svg"
+  },
+  {
+    "id": "jvs-48",
+    "model": "jvs",
+    "name": "Neuvillette",
+    "code": "JVS-049",
+    "gender": "male",
+    "pitchHz": 48.375,
+    "avatar": "voices/jvs-049.svg"
+  },
+  {
+    "id": "jvs-49",
+    "model": "jvs",
+    "name": "Childe",
+    "code": "JVS-050",
+    "gender": "male",
+    "pitchHz": 48.25,
+    "avatar": "voices/jvs-050.svg"
+  },
+  {
+    "id": "jvs-50",
+    "model": "jvs",
+    "name": "Beidou",
+    "code": "JVS-051",
+    "gender": "female",
+    "pitchHz": 58.625,
+    "avatar": "voices/jvs-051.svg"
+  },
+  {
+    "id": "jvs-51",
+    "model": "jvs",
+    "name": "Wanderer",
+    "code": "JVS-052",
+    "gender": "male",
+    "pitchHz": 50.5,
+    "avatar": "voices/jvs-052.svg"
+  },
+  {
+    "id": "jvs-52",
+    "model": "jvs",
+    "name": "Xiangling",
+    "code": "JVS-053",
+    "gender": "female",
+    "pitchHz": 57.625,
+    "avatar": "voices/jvs-053.svg"
+  },
+  {
+    "id": "jvs-53",
+    "model": "jvs",
+    "name": "Baizhu",
+    "code": "JVS-054",
+    "gender": "male",
+    "pitchHz": 49,
+    "avatar": "voices/jvs-054.svg"
+  },
+  {
+    "id": "jvs-54",
+    "model": "jvs",
+    "name": "Xinyan",
+    "code": "JVS-055",
+    "gender": "female",
+    "pitchHz": 57.75,
+    "avatar": "voices/jvs-055.svg"
+  },
+  {
+    "id": "jvs-55",
+    "model": "jvs",
+    "name": "Yun Jin",
+    "code": "JVS-056",
+    "gender": "female",
+    "pitchHz": 56.75,
+    "avatar": "voices/jvs-056.svg"
+  },
+  {
+    "id": "jvs-56",
+    "model": "jvs",
+    "name": "Yanfei",
+    "code": "JVS-057",
+    "gender": "female",
+    "pitchHz": 56.375,
+    "avatar": "voices/jvs-057.svg"
+  },
+  {
+    "id": "jvs-57",
+    "model": "jvs",
+    "name": "Yaoyao",
+    "code": "JVS-058",
+    "gender": "female",
+    "pitchHz": 57,
+    "avatar": "voices/jvs-058.svg"
+  },
+  {
+    "id": "jvs-58",
+    "model": "jvs",
+    "name": "Ayaka",
+    "code": "JVS-059",
+    "gender": "female",
+    "pitchHz": 57.5,
+    "avatar": "voices/jvs-059.svg"
+  },
+  {
+    "id": "jvs-59",
+    "model": "jvs",
+    "name": "Yoimiya",
+    "code": "JVS-060",
+    "gender": "female",
+    "pitchHz": 57.75,
+    "avatar": "voices/jvs-060.svg"
+  },
+  {
+    "id": "jvs-60",
+    "model": "jvs",
+    "name": "Kokomi",
+    "code": "JVS-061",
+    "gender": "female",
+    "pitchHz": 59,
+    "avatar": "voices/jvs-061.svg"
+  },
+  {
+    "id": "jvs-61",
+    "model": "jvs",
+    "name": "Yae Miko",
+    "code": "JVS-062",
+    "gender": "female",
+    "pitchHz": 56.625,
+    "avatar": "voices/jvs-062.svg"
+  },
+  {
+    "id": "jvs-62",
+    "model": "jvs",
+    "name": "Sayu",
+    "code": "JVS-063",
+    "gender": "female",
+    "pitchHz": 58,
+    "avatar": "voices/jvs-063.svg"
+  },
+  {
+    "id": "jvs-63",
+    "model": "jvs",
+    "name": "Sara",
+    "code": "JVS-064",
+    "gender": "female",
+    "pitchHz": 56.125,
+    "avatar": "voices/jvs-064.svg"
+  },
+  {
+    "id": "jvs-64",
+    "model": "jvs",
+    "name": "Shinobu",
+    "code": "JVS-065",
+    "gender": "female",
+    "pitchHz": 58.75,
+    "avatar": "voices/jvs-065.svg"
+  },
+  {
+    "id": "jvs-65",
+    "model": "jvs",
+    "name": "Kirara",
+    "code": "JVS-066",
+    "gender": "female",
+    "pitchHz": 59,
+    "avatar": "voices/jvs-066.svg"
+  },
+  {
+    "id": "jvs-66",
+    "model": "jvs",
+    "name": "Collei",
+    "code": "JVS-067",
+    "gender": "female",
+    "pitchHz": 59,
+    "avatar": "voices/jvs-067.svg"
+  },
+  {
+    "id": "jvs-67",
+    "model": "jvs",
+    "name": "Dainsleif",
+    "code": "JVS-068",
+    "gender": "male",
+    "pitchHz": 47.375,
+    "avatar": "voices/jvs-068.svg"
+  },
+  {
+    "id": "jvs-68",
+    "model": "jvs",
+    "name": "Dori",
+    "code": "JVS-069",
+    "gender": "female",
+    "pitchHz": 57.375,
+    "avatar": "voices/jvs-069.svg"
+  },
+  {
+    "id": "jvs-69",
+    "model": "jvs",
+    "name": "Cloud",
+    "code": "JVS-070",
+    "gender": "male",
+    "pitchHz": 48.375,
+    "avatar": "voices/jvs-070.svg"
+  },
+  {
+    "id": "jvs-70",
+    "model": "jvs",
+    "name": "Sephiroth",
+    "code": "JVS-071",
+    "gender": "male",
+    "pitchHz": 45.375,
+    "avatar": "voices/jvs-071.svg"
+  },
+  {
+    "id": "jvs-71",
+    "model": "jvs",
+    "name": "Candace",
+    "code": "JVS-072",
+    "gender": "female",
+    "pitchHz": 57.875,
+    "avatar": "voices/jvs-072.svg"
+  },
+  {
+    "id": "jvs-72",
+    "model": "jvs",
+    "name": "Link",
+    "code": "JVS-073",
+    "gender": "male",
+    "pitchHz": 49.375,
+    "avatar": "voices/jvs-073.svg"
+  },
+  {
+    "id": "jvs-73",
+    "model": "jvs",
+    "name": "Ren",
+    "code": "JVS-074",
+    "gender": "male",
+    "pitchHz": 46.125,
+    "avatar": "voices/jvs-074.svg"
+  },
+  {
+    "id": "jvs-74",
+    "model": "jvs",
+    "name": "Haruto",
+    "code": "JVS-075",
+    "gender": "male",
+    "pitchHz": 50.5,
+    "avatar": "voices/jvs-075.svg"
+  },
+  {
+    "id": "jvs-75",
+    "model": "jvs",
+    "name": "Yuto",
+    "code": "JVS-076",
+    "gender": "male",
+    "pitchHz": 49.625,
+    "avatar": "voices/jvs-076.svg"
+  },
+  {
+    "id": "jvs-76",
+    "model": "jvs",
+    "name": "Yuki",
+    "code": "JVS-077",
+    "gender": "male",
+    "pitchHz": 50.875,
+    "avatar": "voices/jvs-077.svg"
+  },
+  {
+    "id": "jvs-77",
+    "model": "jvs",
+    "name": "Kenji",
+    "code": "JVS-078",
+    "gender": "male",
+    "pitchHz": 45.125,
+    "avatar": "voices/jvs-078.svg"
+  },
+  {
+    "id": "jvs-78",
+    "model": "jvs",
+    "name": "Hiroshi",
+    "code": "JVS-079",
+    "gender": "male",
+    "pitchHz": 48.5,
+    "avatar": "voices/jvs-079.svg"
+  },
+  {
+    "id": "jvs-79",
+    "model": "jvs",
+    "name": "Takashi",
+    "code": "JVS-080",
+    "gender": "male",
+    "pitchHz": 50.875,
+    "avatar": "voices/jvs-080.svg"
+  },
+  {
+    "id": "jvs-80",
+    "model": "jvs",
+    "name": "Katsuki",
+    "code": "JVS-081",
+    "gender": "male",
+    "pitchHz": 48.25,
+    "avatar": "voices/jvs-081.svg"
+  },
+  {
+    "id": "jvs-81",
+    "model": "jvs",
+    "name": "Layla",
+    "code": "JVS-082",
+    "gender": "female",
+    "pitchHz": 56.875,
+    "avatar": "voices/jvs-082.svg"
+  },
+  {
+    "id": "jvs-82",
+    "model": "jvs",
+    "name": "Faruzan",
+    "code": "JVS-083",
+    "gender": "female",
+    "pitchHz": 59,
+    "avatar": "voices/jvs-083.svg"
+  },
+  {
+    "id": "jvs-83",
+    "model": "jvs",
+    "name": "Dehya",
+    "code": "JVS-084",
+    "gender": "female",
+    "pitchHz": 56.875,
+    "avatar": "voices/jvs-084.svg"
+  },
+  {
+    "id": "jvs-84",
+    "model": "jvs",
+    "name": "Lynette",
+    "code": "JVS-085",
+    "gender": "female",
+    "pitchHz": 58.5,
+    "avatar": "voices/jvs-085.svg"
+  },
+  {
+    "id": "jvs-85",
+    "model": "jvs",
+    "name": "Shota",
+    "code": "JVS-086",
+    "gender": "male",
+    "pitchHz": 48.125,
+    "avatar": "voices/jvs-086.svg"
+  },
+  {
+    "id": "jvs-86",
+    "model": "jvs",
+    "name": "Daiki",
+    "code": "JVS-087",
+    "gender": "male",
+    "pitchHz": 50.625,
+    "avatar": "voices/jvs-087.svg"
+  },
+  {
+    "id": "jvs-87",
+    "model": "jvs",
+    "name": "Ryota",
+    "code": "JVS-088",
+    "gender": "male",
+    "pitchHz": 47.875,
+    "avatar": "voices/jvs-088.svg"
+  },
+  {
+    "id": "jvs-88",
+    "model": "jvs",
+    "name": "Sora",
+    "code": "JVS-089",
+    "gender": "male",
+    "pitchHz": 46.875,
+    "avatar": "voices/jvs-089.svg"
+  },
+  {
+    "id": "jvs-89",
+    "model": "jvs",
+    "name": "Navia",
+    "code": "JVS-090",
+    "gender": "female",
+    "pitchHz": 60.25,
+    "avatar": "voices/jvs-090.svg"
+  },
+  {
+    "id": "jvs-90",
+    "model": "jvs",
+    "name": "Chevreuse",
+    "code": "JVS-091",
+    "gender": "female",
+    "pitchHz": 56.625,
+    "avatar": "voices/jvs-091.svg"
+  },
+  {
+    "id": "jvs-91",
+    "model": "jvs",
+    "name": "Sigewinne",
+    "code": "JVS-092",
+    "gender": "female",
+    "pitchHz": 55.625,
+    "avatar": "voices/jvs-092.svg"
+  },
+  {
+    "id": "jvs-92",
+    "model": "jvs",
+    "name": "Emilie",
+    "code": "JVS-093",
+    "gender": "female",
+    "pitchHz": 60.375,
+    "avatar": "voices/jvs-093.svg"
+  },
+  {
+    "id": "jvs-93",
+    "model": "jvs",
+    "name": "Paimon",
+    "code": "JVS-094",
+    "gender": "female",
+    "pitchHz": 56.875,
+    "avatar": "voices/jvs-094.svg"
+  },
+  {
+    "id": "jvs-94",
+    "model": "jvs",
+    "name": "Tifa",
+    "code": "JVS-095",
+    "gender": "female",
+    "pitchHz": 57.375,
+    "avatar": "voices/jvs-095.svg"
+  },
+  {
+    "id": "jvs-95",
+    "model": "jvs",
+    "name": "Aerith",
+    "code": "JVS-096",
+    "gender": "female",
+    "pitchHz": 58.75,
+    "avatar": "voices/jvs-096.svg"
+  },
+  {
+    "id": "jvs-96",
+    "model": "jvs",
+    "name": "Kaito",
+    "code": "JVS-097",
+    "gender": "male",
+    "pitchHz": 51.875,
+    "avatar": "voices/jvs-097.svg"
+  },
+  {
+    "id": "jvs-97",
+    "model": "jvs",
+    "name": "Zelda",
+    "code": "JVS-098",
+    "gender": "female",
+    "pitchHz": 53.375,
+    "avatar": "voices/jvs-098.svg"
+  },
+  {
+    "id": "jvs-98",
+    "model": "jvs",
+    "name": "Tatsuya",
+    "code": "JVS-099",
+    "gender": "male",
+    "pitchHz": 51.25,
+    "avatar": "voices/jvs-099.svg"
+  },
+  {
+    "id": "jvs-99",
+    "model": "jvs",
+    "name": "Riku",
+    "code": "JVS-100",
+    "gender": "male",
+    "pitchHz": 47.25,
+    "avatar": "voices/jvs-100.svg"
+  },
+  {
+    "id": "official-0",
+    "model": "official_1",
+    "name": "Tsukuyomichan",
+    "originalName": "つくよみちゃん (UTAU)",
+    "avatar": "voices/official-tsukuyomichan.png"
+  },
+  {
+    "id": "official-1",
+    "model": "official_1",
+    "name": "Fukuyomichan",
+    "originalName": "つくよみちゃん (コーパス)",
+    "avatar": "voices/official-fukuyomichan.png"
+  },
+  {
+    "id": "official-2",
+    "model": "official_1",
+    "name": "Tokinashigure",
+    "originalName": "刻鳴時雨",
+    "avatar": "voices/official-tokinashigure.png"
+  },
+  {
+    "id": "official-3",
+    "model": "official_1",
+    "name": "Olune",
+    "originalName": "OLUNE",
+    "avatar": "voices/official-olune.png"
+  },
+  {
+    "id": "retro-0",
+    "model": "old_tts",
+    "name": "Adult Male",
+    "avatar": "voices/retro-0.svg"
+  },
+  {
+    "id": "retro-1",
+    "model": "old_tts",
+    "name": "Espeak",
+    "avatar": "voices/retro-1.svg"
+  },
+  {
+    "id": "retro-2",
+    "model": "old_tts",
+    "name": "Mary",
+    "avatar": "voices/retro-2.svg"
+  },
+  {
+    "id": "retro-3",
+    "model": "old_tts",
+    "name": "Mike",
+    "avatar": "voices/retro-3.svg"
+  },
+  {
+    "id": "retro-4",
+    "model": "old_tts",
+    "name": "Paul",
+    "avatar": "voices/retro-4.svg"
+  },
+  {
+    "id": "retro-5",
+    "model": "old_tts",
+    "name": "Sam",
+    "avatar": "voices/retro-5.svg"
+  },
+  {
+    "id": "retro-6",
+    "model": "old_tts",
+    "name": "Sam Commodore",
+    "avatar": "voices/retro-6.svg"
+  },
+  {
+    "id": "retro-7",
+    "model": "old_tts",
+    "name": "Speak N Spell",
+    "avatar": "voices/retro-7.svg"
+  }
+]

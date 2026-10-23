@@ -15,6 +15,10 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
+            // three.js is only needed by the lazily imported background scene.
+            if (id.includes('/node_modules/three/')) {
+              return 'three';
+            }
             if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
               return 'vendor-react';
             }

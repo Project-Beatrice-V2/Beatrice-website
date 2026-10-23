@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// Tokens follow DESIGN.md ("Aurora Void").
 export default {
   content: [
     "./index.html",
@@ -7,59 +8,65 @@ export default {
   theme: {
     extend: {
       colors: {
-        parchment: {
-          light: '#FBF9F3',
-          base: '#FAF6ED',
-          muted: '#F2EBDC',
-          dark: '#E7DEC7',
-          deep: '#DCD0B4',
-        },
+        void: '#000000',
         ink: {
-          primary: '#1C1917',
-          secondary: '#3C3836',
-          muted: '#66605B',
-          faint: '#A39C94',
+          900: '#07070B',
+          800: '#0D0D13',
+          700: '#15151D',
         },
-        sepia: {
-          light: '#D97706',
-          ink: '#8B4513',
-          deep: '#6B3410',
-          dark: '#4A230A',
+        fg: {
+          DEFAULT: '#FFFFFF',
+          2: '#A1A1AA',
+          3: '#6B6B76',
         },
-        botanical: {
-          sage: '#4A5D4E',
-          forest: '#2D3E30',
-          moss: '#3B4D3C',
-          light: '#E2E8E0',
+        hairline: 'rgba(255,255,255,0.10)',
+        'hairline-strong': 'rgba(255,255,255,0.18)',
+        signal: '#7C8CFF',
+        live: '#3DFFA8',
+        aurora: {
+          navy: '#112D72',
+          indigo: '#4B52AA',
+          lilac: '#A887DC',
+          blush: '#E6C4E7',
+          pearl: '#FCDBEF',
         },
-        field: {
-          gold: '#C89334',
-          rust: '#9E4226',
-        }
+        ember: {
+          DEFAULT: '#FF6A2B',
+          soft: '#FFB36B',
+        },
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        serif: ['var(--font-display)'],
+        display: ['var(--font-display)'],
+        sans: ['var(--font-sans)'],
+        mono: ['"Geist Mono"', 'ui-monospace', 'SF Mono', 'Menlo', 'monospace'],
       },
-      backgroundImage: {
-        'paper-grain': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E\")",
+      letterSpacing: {
+        display: '-0.035em',
+        tightish: '-0.02em',
+        label: '0.08em',
       },
-      boxShadow: {
-        'ink-sm': '0 2px 4px rgba(28, 25, 23, 0.05)',
-        'ink-md': '0 4px 12px rgba(28, 25, 23, 0.08), 0 1px 2px rgba(28, 25, 23, 0.04)',
-        'ink-lg': '0 12px 24px -4px rgba(28, 25, 23, 0.12), 0 4px 8px -2px rgba(28, 25, 23, 0.06)',
-        'parchment-pressed': 'inset 0 2px 4px rgba(28, 25, 23, 0.06)',
+      borderRadius: {
+        card: '20px',
+        frame: '28px',
+      },
+      maxWidth: {
+        content: '1240px',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-33.333%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        pulseDot: {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.4', transform: 'scale(0.8)' },
         },
       },
       animation: {
-        marquee: 'marquee 35s linear infinite',
+        marquee: 'marquee 40s linear infinite',
+        'marquee-slow': 'marquee 70s linear infinite',
+        'pulse-dot': 'pulseDot 1.6s ease-in-out infinite',
       },
     },
   },
