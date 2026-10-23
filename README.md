@@ -13,7 +13,7 @@ The official website for **Beatrice**, the free, open-source real-time AI voice 
 
 [![Website](https://img.shields.io/badge/project--beatrice.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice.vercel.app/)
 [![Total stars](https://img.shields.io/endpoint?url=https%3A%2F%2Fproject-beatrice.vercel.app%2Fapi%2Fstars%3Fformat%3Dshields&style=for-the-badge&label=%E2%98%85%20total%20stars)](https://github.com/Project-Beatrice-V2)
-[![Deployment](https://img.shields.io/github/deployments/Project-Beatrice-V2/Beatrice-website/Production?style=for-the-badge&logo=vercel&logoColor=white&label=deploy&labelColor=000000)](https://github.com/Project-Beatrice-V2/Beatrice-website/deployments)
+[![Vercel deploy](https://img.shields.io/github/checks-status/Project-Beatrice-V2/Beatrice-website/main?style=for-the-badge&logo=vercel&logoColor=white&label=vercel&labelColor=000000)](https://project-beatrice.vercel.app/)
 [![License](https://img.shields.io/badge/license-MIT-white?style=for-the-badge&labelColor=000000)](LICENSE)
 
 **[Website](https://project-beatrice.vercel.app/)** · **[Download](https://project-beatrice.vercel.app/download)** · **[All 112 voices](https://project-beatrice.vercel.app/voices)** · **[Guides](https://project-beatrice.vercel.app/docs)** · **[About](https://project-beatrice.vercel.app/about)**
