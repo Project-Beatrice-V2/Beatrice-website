@@ -2,6 +2,8 @@ import type { Copy } from './en';
 
 export const ja: Copy = {
   nav: {
+    docs: 'ガイド',
+    about: '概要',
     voices: 'ボイス',
     how: '使い方',
     features: '機能',
@@ -142,7 +144,7 @@ export const ja: Copy = {
     links: {
       download: 'ダウンロード', voices: 'ボイス', how: '使い方', faq: 'よくある質問',
       trainer: 'トレーナー', colab: 'Colab ノートブック', dataset: 'データセット Web UI', models: 'ボイスモデル',
-      org: 'GitHub', issues: '不具合を報告', license: 'ライセンス（MIT）', original: 'オリジナルの Beatrice',
+      org: 'GitHub', issues: '不具合を報告', license: 'ライセンス（MIT）', original: 'オリジナルの Beatrice', docs: 'ガイド', about: '概要',
     },
     credits: 'Beatrice音声エンジン：prj-beatrice。JVSコーパス：東京大学（非商用利用に限る）。',
     language: '言語',
@@ -179,5 +181,142 @@ export const ja: Copy = {
     sub: 'Beatriceに内蔵されているすべての声を、アプリと同じ表示で。',
     search: '声を検索',
     empty: '一致する声が見つかりません。',
+  },
+  docs: {
+    label: 'ガイド',
+    title: '必要なことは、すべてここに。',
+    sub: 'MacとWindowsでのインストール、設定、調整、トラブルシューティング。',
+    toc: 'このページの内容',
+    sections: [
+      {
+        id: 'install-mac',
+        title: 'Macにインストール',
+        body: 'Apple Silicon（M1・M2・M3・M4）搭載のMacが必要です。Pythonなど必要なものはすべてアプリに内蔵されています。',
+        steps: [
+          'ダウンロードページから最新のarm64版DMGをダウンロードします。',
+          'DMGを開き、Beatrice Voice Changerをアプリケーションフォルダへドラッグします。',
+          'Beatriceを開きます。「検証できません」と表示されたら「完了」をクリックし、システム設定 → プライバシーとセキュリティ の「セキュリティ」で「このまま開く」をクリックします。初回のみの操作です。',
+          'マイクへのアクセスを求められたら「許可」をクリックします。数秒でウィンドウ左下に「Backend connected」と表示されます。',
+        ],
+      },
+      {
+        id: 'install-win',
+        title: 'Windowsにインストール',
+        body: 'Windows 10／11（64ビット）で動作します。',
+        steps: [
+          'ダウンロードページからインストーラーをダウンロードします。',
+          '実行します。Microsoft Defender SmartScreenが表示されたら「詳細情報」→「実行」をクリックします。',
+          'スタートメニューからBeatriceを開き、求められたらマイクへのアクセスを許可します。',
+        ],
+      },
+      {
+        id: 'first-voice',
+        title: 'はじめての声',
+        steps: [
+          'Audio Routingで、Input Microphoneを話すマイクに設定します。',
+          'Output Deviceをヘッドホンに設定します。スピーカーだと変換後の声がマイクに戻り、ハウリングします。',
+          'ボイスライブラリから好きな顔をクリックします。Voice ModelメニューでJVS コーパス・公式モデル 1・クラシック TTSを切り替えられます。',
+          '電源ボタンを押して「Bypassed」から「Live」に切り替え、話してみましょう。',
+          '出力先が別の場所でも自分の声を聞きたいときは、Hear Yourselfをオンにしてモニター用デバイスを選びます。',
+        ],
+      },
+      {
+        id: 'routing',
+        title: 'Discord・Zoom・OBSで使う',
+        body: '他のアプリはBeatriceの音を直接聞けません。無料の仮想オーディオケーブルが、変換後の声をマイクとして届けます。',
+        steps: [
+          '仮想ケーブルをインストールします。MacはBlackHole 2ch（existential.audio/blackhole）、WindowsはVB-Cable（vb-audio.com/Cable）。',
+          'BeatriceのOutput Deviceをそのケーブル（BlackHole 2ch、WindowsはCABLE Input）に設定します。',
+          '使うアプリでマイクとしてケーブル（BlackHole 2ch、WindowsはCABLE Output）を選びます。Discord：設定 → 音声・ビデオ → 入力デバイス。Zoom：設定 → オーディオ → マイク。OBS：「音声入力キャプチャ」ソースを追加。',
+          'ヘッドホンでも聞きたいときは、BeatriceのHear Yourselfをオンにします。',
+        ],
+        tip: 'Discordで声が途切れる場合は、Discord側のノイズ抑制とエコー除去をオフにしてください。人の声向けの処理が、変換後の声とぶつかることがあります。',
+      },
+      {
+        id: 'tune',
+        title: '声を調整する',
+        rows: [
+          ['Pitch Shift', '−12〜+12 半音', '声を高く、または低くします。'],
+          ['Formant Shift', '−1.5〜+1.5', '高さを変えずに声の性格（響き）を変えます。'],
+          ['Noise Gate', '0.000〜0.100', 'この値より小さい音を消します。0から少しずつ上げ、言葉の合間の雑音が消えるところで止めます。'],
+          ['Output Volume', '0〜200%', '変換後の声の最終的な音量です。'],
+        ],
+      },
+      {
+        id: 'soundboard',
+        title: 'サウンドボード',
+        steps: [
+          'Soundboardタブを開き、クリップ（WAV・MP3・FLACなど）をアップロードするかドラッグします。',
+          'クリップにキーを割り当てると、別のアプリを操作中でもどこからでも再生できます。',
+          'クリップはOutput Deviceから再生されるので、通話相手に届きます。自分でも聞きたいときはHear Yourselfをオンに。',
+        ],
+      },
+      {
+        id: 'custom-models',
+        title: 'カスタムボイスモデル',
+        body: 'BeatriceはBeatrice 2形式のボイスモデルを読み込めます。Voice Modelメニューで「Upload Custom Model」を選び、次のようなモデルフォルダを含むZIPを選択します。',
+        code: 'my_model/\n├── phone_extractor.bin\n├── pitch_estimator.bin\n├── waveform_generator.bin\n├── embedding_setter.bin\n├── speaker_embeddings.bin\n├── model.toml\n└── avatar.png   （任意）',
+        tip: 'RVCモデル（.pth・.indexファイル）は種類の異なるモデルのため、読み込みや変換はできません。',
+      },
+      {
+        id: 'train',
+        title: '自分の声を学習する',
+        body: '10〜30分程度の、雑音のないクリアな音声で最良の結果が得られます。使用許可を得た声だけを使ってください。',
+        steps: [
+          'データセット Web UIで録音を準備します。長いファイルを切り分け、雑音を取り除き、クリップを確認します。',
+          'MacやWindowsのBeatrice Trainer、または無料のColab・Kaggleノートブックで学習します。',
+          '完成したモデルフォルダをZIPにし、「Upload Custom Model」で読み込みます。',
+        ],
+      },
+      {
+        id: 'requirements',
+        title: '動作環境',
+        head: ['', 'Mac', 'Windows'],
+        rows: [
+          ['OS', 'macOS 12以降', 'Windows 10／11（64ビット）'],
+          ['プロセッサ', 'Apple Silicon（M1〜M4）', '64ビット x86 CPU'],
+          ['メモリ', '8 GB', '8 GB'],
+          ['仮想ケーブル（任意）', 'BlackHole 2ch', 'VB-Cable'],
+          ['非対応', 'Intel Mac', 'ARM版Windows'],
+        ],
+      },
+      {
+        id: 'troubleshooting',
+        title: 'トラブルシューティング',
+        items: [
+          { q: 'macOSで「壊れているため開けません」と表示される。', a: 'v2.1.0の署名の不具合です。アプリを削除してv2.1.1以降をインストールすれば、「このまま開く」で通常どおり開けます。' },
+          { q: '「Waiting for backend…」「Connecting…」のまま進まない。', a: '2.1.0より前のバージョンはPythonを別途インストールする必要がありました。すべて内蔵された最新版をインストールし、⌘Qで終了してから開き直してください。' },
+          { q: '「The voice engine stopped unexpectedly」と表示される。', a: '「Copy Details」をクリックし、GitHubのIssueに貼り付けて報告してください。多くの場合、終了して開き直せば再び使えます。' },
+          { q: '何も聞こえない。', a: '電源ボタンが「Live」になっているか、Output Deviceがヘッドホンになっているか（出力が仮想ケーブルの場合はHear Yourselfがオンか）、話したときに入力メーターが動くかを確認してください。' },
+          { q: '声がロボットのよう、またはノイズが混じる。', a: 'マイクの入力レベルを下げ、マイクに近づき、Noise Gateを0に戻してください。ノートパソコン内蔵マイクよりヘッドセットのマイクの方がずっと良く聞こえます。' },
+          { q: 'エコーや大きなハウリング音がする。', a: '変換後の声がスピーカーから出てマイクに戻っています。ヘッドホンを使ってください。' },
+        ],
+      },
+      {
+        id: 'developers',
+        title: '開発者向け',
+        body: '音声エンジンは http://127.0.0.1:5005 で動く小さなローカルサーバーで、アプリはここと通信しています。スクリプトからも操作できます。',
+        code: 'GET /status                     現在の状態・メーター・デバイス\nGET /devices                    オーディオデバイス一覧\nGET /set_config?pitch_shift=3   設定をリアルタイムに変更\nGET /set_model?model=jvs        モデルを切り替え（jvs, official_1, old_tts, custom:<name>）\nGET /play_sound?file_path=…     サウンドボードのクリップを再生\nGET /stop_sound                 再生を停止',
+      },
+    ],
+  },
+  about: {
+    label: 'このプロジェクトについて',
+    titleA: 'みんなのための、',
+    titleB: 'ボイスチェンジャー。',
+    story: [
+      'Beatriceは、ひとつの不満から始まりました。優れたリアルタイムAIボイスチェンジャーは、遅いか、サブスクリプションが必要か、複雑なPython環境の奥に埋もれていたのです。',
+      'だから、無料のオープンソース版を作りました。Beatriceは、prj-beatriceによるBeatrice 2音声エンジンをMacとWindows向けのネイティブアプリにまとめたものです。ダウンロードはひとつ、アカウント不要、サーバーには何も送りません。',
+      'その周りに、声を作るためのオープンなツールが育ちました。データセットツール、MacとWindows用のトレーナー、無料のクラウドノートブック。誰もが声を「使う」だけでなく「作れる」ように。',
+    ],
+    principles: [
+      { title: '無料でオープン', body: 'MITライセンス。コードを読み、変え、公開できます。' },
+      { title: 'プライバシーを前提に', body: 'すべてあなたのパソコンの中で動き、声が外に出ることはありません。' },
+      { title: 'みんなでつくる', body: '音声研究者、声優、オープンソース開発者の仕事の上に成り立っています。' },
+    ],
+    peopleLabel: 'チーム',
+    peopleTitle: '声の向こうにいる人たち。',
+    you: 'メンテナー',
+    logoNote: 'Beatriceのマーク：オリジナルロゴの星形の百合が、音の波から伸びています。',
   },
 };

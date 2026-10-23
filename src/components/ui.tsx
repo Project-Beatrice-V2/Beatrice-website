@@ -1,12 +1,11 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { gsap, prefersReducedMotion } from '../lib/motion';
+import { MARK_SVG, MARK_SMALL_SVG } from './logoPaths';
 
-/** Beatrice mark: the app icon's circle with a sine wave through it. */
-export const LogoMark: React.FC<{ className?: string }> = ({ className = 'h-7 w-7' }) => (
-  <svg viewBox="0 0 32 32" className={className} aria-hidden>
-    <circle cx="16" cy="16" r="10.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
-    <path d="M9 16 Q11.6 10.2 14.2 16 T19.4 16 T24 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
+/** Beatrice "Sprig" mark: star lilies rising from the voice wave (see brand/). */
+export const LogoMark: React.FC<{ className?: string; detail?: boolean }> = ({ className = 'h-7 w-7', detail = false }) => (
+  <svg viewBox="0 0 64 64" className={className} aria-hidden strokeLinecap="round" strokeLinejoin="round"
+    dangerouslySetInnerHTML={{ __html: detail ? MARK_SVG : MARK_SMALL_SVG }} />
 );
 
 export const AppleIcon: React.FC<{ className?: string }> = ({ className = 'h-[18px] w-[18px]' }) => (

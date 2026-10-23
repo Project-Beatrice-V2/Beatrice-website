@@ -56,6 +56,19 @@ Rules: white is the primary CTA fill (black text). Colour lives in the WebGL sce
 - Hover: borders brighten, never jump. 200ms.
 - `prefers-reduced-motion`: no scrubbing or parallax; static aurora image; content fades only.
 
+## Logo: "Sprig"
+
+The official Beatrice logo's star lilies (two open flowers, a bud and a leaf) growing out of the app's sine wave. Black and white only. Sources and generator: `brand/` (`python3 brand/make_sprig.py` writes the SVGs; `--ts` regenerates `src/components/logoPaths.ts`).
+
+| Cut | Use |
+|---|---|
+| Full mark, fine lines | ≥ 48px: app icon, About page, large brand moments |
+| Full mark, heavy lines | 24–48px: nav, footer |
+| Compact (one lily + wave) | ≤ 32px: favicon, browser tab |
+| App icon | Full mark in white on a black squircle (`brand/beatrice-app-icon.svg`), light variant for light contexts |
+
+Petals are filled glyph shapes with an open centre and a stamen dot, so the flowers never read as palm leaves. Don't recolour, outline, or add effects to the mark.
+
 ## Voices
 
 Voice **names and avatar images are identical to the app**: generated from the same TOML files with the same naming rules (`scripts/build-voices.mjs`). Never rename or restyle an avatar.

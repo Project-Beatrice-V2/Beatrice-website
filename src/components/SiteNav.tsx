@@ -49,19 +49,22 @@ export const SiteNav: React.FC = () => {
 
   useEffect(() => setOpen(false), [pathname]);
 
-  const go = (id: string) => {
+  // Links are either sections of the home page (#id) or their own pages (/path).
+  const go = (target: string) => {
     setOpen(false);
-    if (pathname === '/') scrollToTarget(`#${id}`);
-    else navigate(`/#${id}`);
+    if (target.startsWith('/')) navigate(target);
+    else if (pathname === '/') scrollToTarget(`#${target}`);
+    else navigate(`/#${target}`);
   };
 
   const links = [
-    { id: 'voices', label: c.nav.voices },
     { id: 'how', label: c.nav.how },
     { id: 'features', label: c.nav.features },
-    { id: 'create', label: c.nav.create },
-    { id: 'faq', label: c.nav.faq },
+    { id: '/voices', label: c.nav.voices },
+    { id: '/docs', label: c.nav.docs },
+    { id: '/about', label: c.nav.about },
   ];
+  const isActive = (target: string) => target.startsWith('/') && pathname.startsWith(target);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
@@ -77,7 +80,8 @@ export const SiteNav: React.FC = () => {
         <ul className="hidden items-center gap-1 lg:flex">
           {links.map((l) => (
             <li key={l.id}>
-              <button onClick={() => go(l.id)} className="rounded-full px-3.5 py-2 text-[14px] text-fg-2 transition-colors hover:text-white">
+              <button onClick={() => go(l.id)} aria-current={isActive(l.id) ? 'page' : undefined}
+                className={`rounded-full px-3.5 py-2 text-[14px] transition-colors hover:text-white ${isActive(l.id) ? 'text-white' : 'text-fg-2'}`}>
                 {l.label}
               </button>
             </li>

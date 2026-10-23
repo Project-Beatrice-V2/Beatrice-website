@@ -7,6 +7,8 @@ import { SceneCanvas } from './components/SceneCanvas';
 import { HomePage } from './pages/HomePage';
 import { DownloadPage } from './pages/DownloadPage';
 import { VoicesPage } from './pages/VoicesPage';
+import { DocsPage } from './pages/DocsPage';
+import { AboutPage } from './pages/AboutPage';
 import { startSmoothScroll, scrollToTopInstant, ScrollTrigger } from './lib/motion';
 import { useCopy, useHtmlLang } from './content';
 
@@ -46,6 +48,8 @@ export const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/download" element={<DownloadPage />} />
             <Route path="/voices" element={<VoicesPage />} />
+            <Route path="/docs" element={<DocsPage />} />
+            <Route path="/about" element={<AboutPage />} />
             {/* Old routes, folded into the new single-page story */}
             <Route path="/how-it-works" element={<Navigate to="/#how" replace />} />
             <Route path="/modules" element={<Navigate to="/#create" replace />} />

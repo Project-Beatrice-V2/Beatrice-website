@@ -2,6 +2,8 @@ import type { Copy } from './en';
 
 export const zh: Copy = {
   nav: {
+    docs: '指南',
+    about: '关于',
     voices: '声音',
     how: '使用方法',
     features: '功能',
@@ -142,7 +144,7 @@ export const zh: Copy = {
     links: {
       download: '下载', voices: '声音', how: '使用方法', faq: '常见问题',
       trainer: '训练器', colab: 'Colab 笔记本', dataset: '数据集 Web UI', models: '声音模型',
-      org: 'GitHub', issues: '报告问题', license: '许可证（MIT）', original: '原版 Beatrice',
+      org: 'GitHub', issues: '报告问题', license: '许可证（MIT）', original: '原版 Beatrice', docs: '指南', about: '关于',
     },
     credits: 'Beatrice 语音引擎由 prj-beatrice 开发。JVS 语料库来自东京大学，仅限非商业用途。',
     language: '语言',
@@ -179,5 +181,142 @@ export const zh: Copy = {
     sub: 'Beatrice 内置的每一种声音，与应用中显示的完全一致。',
     search: '搜索声音',
     empty: '没有匹配的声音。',
+  },
+  docs: {
+    label: '指南',
+    title: '你需要知道的一切。',
+    sub: '在 Mac 和 Windows 上安装、设置、调节 Beatrice 以及排查问题。',
+    toc: '本页内容',
+    sections: [
+      {
+        id: 'install-mac',
+        title: '在 Mac 上安装',
+        body: '需要搭载 Apple Silicon（M1、M2、M3 或 M4）的 Mac。Python 等所需的一切都已内置在应用中。',
+        steps: [
+          '从下载页面下载最新的 arm64 DMG。',
+          '打开 DMG，把 Beatrice Voice Changer 拖进“应用程序”。',
+          '打开 Beatrice。如果 macOS 提示无法验证，点击“完成”，然后打开 系统设置 → 隐私与安全性，在“安全性”中点击“仍要打开”。只需操作一次。',
+          '请求使用麦克风时点击“允许”。几秒后窗口左下角会显示“Backend connected”。',
+        ],
+      },
+      {
+        id: 'install-win',
+        title: '在 Windows 上安装',
+        body: '支持 Windows 10 和 11（64 位）。',
+        steps: [
+          '从下载页面下载安装程序。',
+          '运行它。如果出现 Microsoft Defender SmartScreen，点击“更多信息”→“仍要运行”。',
+          '从开始菜单打开 Beatrice，并在 Windows 询问时允许访问麦克风。',
+        ],
+      },
+      {
+        id: 'first-voice',
+        title: '你的第一个声音',
+        steps: [
+          '在 Audio Routing 中，把 Input Microphone 设为你说话用的麦克风。',
+          '把 Output Device 设为耳机。不要用扬声器，否则转换后的声音会回到麦克风里产生啸叫。',
+          '在声音库中点击任意一张脸。用 Voice Model 菜单在 JVS 语料库、官方模型 1 和经典 TTS 之间切换。',
+          '点击电源键，从 Bypassed 切换到 Live，然后开始说话。',
+          '如果声音输出到别处时你也想收听，打开 Hear Yourself 并选择监听设备。',
+        ],
+      },
+      {
+        id: 'routing',
+        title: '在 Discord、Zoom 或 OBS 中使用',
+        body: '其他应用无法直接听到 Beatrice。免费的虚拟音频线会把转换后的声音当作麦克风传给它们。',
+        steps: [
+          '安装虚拟音频线：Mac 用 BlackHole 2ch（existential.audio/blackhole），Windows 用 VB-Cable（vb-audio.com/Cable）。',
+          '在 Beatrice 中把 Output Device 设为该音频线（BlackHole 2ch，Windows 上为 CABLE Input）。',
+          '在其他应用中选择该音频线作为麦克风（BlackHole 2ch，Windows 上为 CABLE Output）。Discord：设置 → 语音和视频 → 输入设备。Zoom：设置 → 音频 → 麦克风。OBS：添加“音频输入采集”来源。',
+          '在 Beatrice 中打开 Hear Yourself，即可继续在耳机里收听。',
+        ],
+        tip: '如果在 Discord 中声音断断续续，请关闭 Discord 自带的降噪和回声消除。它们是为真人声音调校的，可能会与转换后的声音冲突。',
+      },
+      {
+        id: 'tune',
+        title: '调节你的声音',
+        rows: [
+          ['Pitch Shift', '−12 到 +12 个半音', '让声音更高或更低。'],
+          ['Formant Shift', '−1.5 到 +1.5', '在不改变音高的情况下改变声音的特质。'],
+          ['Noise Gate', '0.000 到 0.100', '低于此值的输入会被静音。从 0 开始慢慢调高，直到说话间隙的背景噪音消失。'],
+          ['Output Volume', '0 到 200%', '转换后声音的最终音量。'],
+        ],
+      },
+      {
+        id: 'soundboard',
+        title: '音效板',
+        steps: [
+          '打开 Soundboard 标签，上传音频片段（WAV、MP3、FLAC 等），或直接拖入。',
+          '为片段设置快捷键，即使在其他应用中也能随时播放。',
+          '片段通过 Output Device 播放，所以通话中的人能听到。打开 Hear Yourself 你也能听到。',
+        ],
+      },
+      {
+        id: 'custom-models',
+        title: '自定义声音模型',
+        body: 'Beatrice 可以加载任何 Beatrice 2 声音模型。在 Voice Model 菜单中选择 Upload Custom Model，然后选择一个包含如下模型文件夹的 ZIP：',
+        code: 'my_model/\n├── phone_extractor.bin\n├── pitch_estimator.bin\n├── waveform_generator.bin\n├── embedding_setter.bin\n├── speaker_embeddings.bin\n├── model.toml\n└── avatar.png   （可选）',
+        tip: 'RVC 模型（.pth 和 .index 文件）是另一种模型，无法加载或转换。',
+      },
+      {
+        id: 'train',
+        title: '训练你自己的声音',
+        body: '大约 10 到 30 分钟干净、无噪音的语音效果最好。请只使用你已获得许可的声音。',
+        steps: [
+          '用数据集 Web UI 准备录音：切分长文件、去除噪音并检查片段。',
+          '在 Mac 或 Windows 电脑上用 Beatrice Trainer 训练，或使用免费的 Colab / Kaggle 笔记本。',
+          '把训练好的模型文件夹打包成 ZIP，用 Upload Custom Model 载入。',
+        ],
+      },
+      {
+        id: 'requirements',
+        title: '系统要求',
+        head: ['', 'Mac', 'Windows'],
+        rows: [
+          ['系统', 'macOS 12 或更高版本', 'Windows 10 或 11，64 位'],
+          ['处理器', 'Apple Silicon（M1–M4）', '64 位 x86 CPU'],
+          ['内存', '8 GB', '8 GB'],
+          ['虚拟音频线（可选）', 'BlackHole 2ch', 'VB-Cable'],
+          ['不支持', 'Intel Mac', 'ARM 版 Windows'],
+        ],
+      },
+      {
+        id: 'troubleshooting',
+        title: '问题排查',
+        items: [
+          { q: 'macOS 提示 Beatrice“已损坏，无法打开”。', a: '这是 v2.1.0 的签名问题。删除应用并安装 v2.1.1 或更高版本，即可通过“仍要打开”正常打开。' },
+          { q: '一直停在“Waiting for backend…”或“Connecting…”。', a: '2.1.0 之前的版本需要单独安装 Python。请安装已内置一切的最新版本，然后用 ⌘Q 退出并重新打开。' },
+          { q: 'Beatrice 提示“The voice engine stopped unexpectedly”。', a: '点击 Copy Details，在 GitHub 上提交 Issue 并粘贴内容。通常退出后重新打开即可恢复使用。' },
+          { q: '什么都听不到。', a: '检查电源键是否为 Live、Output Device 是否为耳机（如果输出是虚拟音频线，请打开 Hear Yourself），以及说话时输入电平表是否在动。' },
+          { q: '声音像机器人或有爆音。', a: '调低麦克风输入电平，靠近麦克风，并把 Noise Gate 调回 0。耳麦通常比笔记本内置麦克风效果好得多。' },
+          { q: '有回声或刺耳的啸叫。', a: '这是反馈：转换后的声音从扬声器播出又回到了麦克风。请使用耳机。' },
+        ],
+      },
+      {
+        id: 'developers',
+        title: '开发者',
+        body: '语音引擎是运行在 http://127.0.0.1:5005 上的本地小型服务器，应用通过它通信。你也可以用脚本控制：',
+        code: 'GET /status                     当前状态、电平和设备\nGET /devices                    音频设备列表\nGET /set_config?pitch_shift=3   实时修改设置\nGET /set_model?model=jvs        切换模型（jvs, official_1, old_tts, custom:<name>）\nGET /play_sound?file_path=…     播放音效板片段\nGET /stop_sound                 停止播放',
+      },
+    ],
+  },
+  about: {
+    label: '关于',
+    titleA: '一个属于',
+    titleB: '每个人的变声器。',
+    story: [
+      'Beatrice 源于一个简单的困扰：好用的实时 AI 变声器要么很慢，要么被订阅锁住，要么藏在复杂的 Python 环境里。',
+      '所以我们做了一个免费、开源的版本。Beatrice 把 prj-beatrice 开发的 Beatrice 2 语音引擎封装成 Mac 和 Windows 原生应用：一次下载，无需账号，不向服务器发送任何内容。',
+      '围绕它，一套用于制作声音的开放工具逐渐成长起来：数据集工具、Mac 和 Windows 训练器，以及免费的云端笔记本。让每个人不只是使用声音，还能创造声音。',
+    ],
+    principles: [
+      { title: '免费且开放', body: 'MIT 许可。阅读代码、修改它、发布它。' },
+      { title: '隐私优先', body: '一切都在你的电脑上运行，你的声音不会离开它。' },
+      { title: '共同打造', body: '建立在语音研究者、声优和开源开发者的工作之上。' },
+    ],
+    peopleLabel: '团队',
+    peopleTitle: '声音背后的人。',
+    you: '维护者',
+    logoNote: 'Beatrice 标志：原版标志中的星形百合，从声波中生长出来。',
   },
 };

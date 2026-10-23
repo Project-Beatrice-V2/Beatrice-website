@@ -42,6 +42,7 @@ export const SiteFooter: React.FC = () => {
         {col(f.product, [
           { label: f.links.download, href: '/download', internal: true },
           { label: f.links.voices, href: '/voices', internal: true },
+          { label: f.links.docs, href: '/docs', internal: true },
           { label: f.links.how, href: '/#how', internal: true },
           { label: f.links.faq, href: '/#faq', internal: true },
         ])}
@@ -52,6 +53,7 @@ export const SiteFooter: React.FC = () => {
           { label: f.links.models, href: repoUrl('Beatrice-voice-models') },
         ])}
         {col(f.project, [
+          { label: f.links.about, href: '/about', internal: true },
           { label: f.links.org, href: ORG_URL },
           { label: f.links.issues, href: repoUrl('Beatrice-voicechanger-macos') + '/issues' },
           { label: f.links.license, href: repoUrl('Beatrice-voicechanger-macos') + '/blob/main/LICENSE' },

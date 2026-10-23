@@ -2,6 +2,8 @@
 
 export const en = {
   nav: {
+    docs: 'Guides',
+    about: 'About',
     voices: 'Voices',
     how: 'How it works',
     features: 'Features',
@@ -142,7 +144,7 @@ export const en = {
     links: {
       download: 'Download', voices: 'Voices', how: 'How it works', faq: 'FAQ',
       trainer: 'Trainer', colab: 'Colab notebooks', dataset: 'Dataset Web UI', models: 'Voice models',
-      org: 'GitHub', issues: 'Report a bug', license: 'License (MIT)', original: 'Original Beatrice',
+      org: 'GitHub', issues: 'Report a bug', license: 'License (MIT)', original: 'Original Beatrice', docs: 'Guides', about: 'About',
     },
     credits: 'Beatrice voice engine by prj-beatrice. JVS corpus by the University of Tokyo, for non-commercial use.',
     language: 'Language',
@@ -179,6 +181,143 @@ export const en = {
     sub: 'Every voice that ships with Beatrice, exactly as it appears in the app.',
     search: 'Search voices',
     empty: 'No voices match that search.',
+  },
+  docs: {
+    label: 'Guides',
+    title: 'Everything you need to know.',
+    sub: 'Install, set up, tune and troubleshoot Beatrice on Mac and Windows.',
+    toc: 'On this page',
+    sections: [
+      {
+        id: 'install-mac',
+        title: 'Install on Mac',
+        body: 'Requires a Mac with Apple Silicon (M1, M2, M3 or M4). Everything Beatrice needs, including Python, is built into the app.',
+        steps: [
+          'Download the latest arm64 DMG from the Download page.',
+          'Open the DMG and drag Beatrice Voice Changer into Applications.',
+          'Open Beatrice. If macOS says it can’t verify the app, click Done, then open System Settings → Privacy & Security, scroll to Security and click Open Anyway. You only do this once.',
+          'Click Allow when Beatrice asks to use your microphone. The bottom left of the window should say “Backend connected” within a few seconds.',
+        ],
+      },
+      {
+        id: 'install-win',
+        title: 'Install on Windows',
+        body: 'Runs on Windows 10 and 11 (64-bit).',
+        steps: [
+          'Download the installer from the Download page.',
+          'Run it. If Microsoft Defender SmartScreen appears, click More info → Run anyway.',
+          'Open Beatrice from the Start menu and allow microphone access if Windows asks.',
+        ],
+      },
+      {
+        id: 'first-voice',
+        title: 'Your first voice',
+        steps: [
+          'Under Audio Routing, set Input Microphone to the mic you speak into.',
+          'Set Output Device to your headphones. Use headphones, not speakers, or the converted voice will feed back into the mic.',
+          'Click any face in the voice library. Use the Voice Model menu to switch between JVS Corpus, Official Model 1 and Classic TTS.',
+          'Click the power button so it changes from Bypassed to Live, and start talking.',
+          'Turn on Hear Yourself and choose a monitor device if you want to listen while the voice goes somewhere else.',
+        ],
+      },
+      {
+        id: 'routing',
+        title: 'Use it in Discord, Zoom or OBS',
+        body: 'Other apps can’t hear Beatrice directly. A free virtual audio cable carries the converted voice into them as if it were a microphone.',
+        steps: [
+          'Install a virtual cable: BlackHole 2ch on Mac (existential.audio/blackhole), or VB-Cable on Windows (vb-audio.com/Cable).',
+          'In Beatrice, set Output Device to the cable (BlackHole 2ch, or CABLE Input on Windows).',
+          'In your other app, choose the cable as the microphone (BlackHole 2ch, or CABLE Output on Windows). Discord: Settings → Voice & Video → Input Device. Zoom: Settings → Audio → Microphone. OBS: add an Audio Input Capture source.',
+          'Turn on Hear Yourself in Beatrice to keep listening in your headphones.',
+        ],
+        tip: 'If your voice sounds choppy in Discord, turn off Discord’s own noise suppression and echo cancellation. They’re tuned for human voices and can fight the converted one.',
+      },
+      {
+        id: 'tune',
+        title: 'Tune your voice',
+        rows: [
+          ['Pitch Shift', '−12 to +12 semitones', 'Makes the voice higher or lower.'],
+          ['Formant Shift', '−1.5 to +1.5', 'Changes the character of the voice without changing its pitch.'],
+          ['Noise Gate', '0.000 to 0.100', 'Silences input below this level. Start at 0 and raise it slowly until background noise disappears between words.'],
+          ['Output Volume', '0 to 200%', 'Final loudness of the converted voice.'],
+        ],
+      },
+      {
+        id: 'soundboard',
+        title: 'Soundboard',
+        steps: [
+          'Open the Soundboard tab and upload clips (WAV, MP3, FLAC and more), or drag them in.',
+          'Give a clip a keybind to fire it from anywhere, even while another app is focused.',
+          'Clips play through your Output Device, so they reach your call. Turn on Hear Yourself to hear them too.',
+        ],
+      },
+      {
+        id: 'custom-models',
+        title: 'Custom voice models',
+        body: 'Beatrice can load any Beatrice 2 voice model. In the Voice Model menu, choose Upload Custom Model and pick a ZIP that contains a model folder like this:',
+        code: 'my_model/\n├── phone_extractor.bin\n├── pitch_estimator.bin\n├── waveform_generator.bin\n├── embedding_setter.bin\n├── speaker_embeddings.bin\n├── model.toml\n└── avatar.png   (optional)',
+        tip: 'RVC models (.pth and .index files) are a different kind of model and can’t be loaded or converted.',
+      },
+      {
+        id: 'train',
+        title: 'Train your own voice',
+        body: 'About 10 to 30 minutes of clean, noise-free speech gives the best results. Only use voices you have permission to use.',
+        steps: [
+          'Prepare the recordings with the Dataset Web UI: slice long files, remove noise and check the clips.',
+          'Train with the Beatrice Trainer on your Mac or Windows PC, or for free with the Colab or Kaggle notebooks.',
+          'ZIP the finished model folder and load it with Upload Custom Model.',
+        ],
+      },
+      {
+        id: 'requirements',
+        title: 'Requirements',
+        head: ['', 'Mac', 'Windows'],
+        rows: [
+          ['System', 'macOS 12 or later', 'Windows 10 or 11, 64-bit'],
+          ['Processor', 'Apple Silicon (M1–M4)', '64-bit x86 CPU'],
+          ['Memory', '8 GB', '8 GB'],
+          ['Virtual cable (optional)', 'BlackHole 2ch', 'VB-Cable'],
+          ['Not supported', 'Intel Macs', 'Windows on ARM'],
+        ],
+      },
+      {
+        id: 'troubleshooting',
+        title: 'Troubleshooting',
+        items: [
+          { q: 'macOS says Beatrice “is damaged and can’t be opened”.', a: 'That was a signing bug in v2.1.0. Delete the app and install v2.1.1 or newer, which opens normally with Open Anyway.' },
+          { q: 'It stays on “Waiting for backend…” / “Connecting…”.', a: 'Versions before 2.1.0 needed Python installed separately. Install the latest version, which has everything built in, then quit with ⌘Q and reopen.' },
+          { q: 'Beatrice says “The voice engine stopped unexpectedly”.', a: 'Click Copy Details and open an issue on GitHub with the text pasted in. Quitting and reopening usually gets you going again.' },
+          { q: 'I can’t hear anything.', a: 'Check that the power button says Live, that Output Device is your headphones (or that Hear Yourself is on when the output is a virtual cable), and that the input meter moves when you speak.' },
+          { q: 'The voice sounds robotic or crackly.', a: 'Lower your mic’s input level, move closer to the mic, and set the Noise Gate back to 0. A headset mic usually sounds much better than a laptop’s built-in one.' },
+          { q: 'There’s an echo or a loud whine.', a: 'That’s feedback: the converted voice is coming out of speakers and back into the mic. Use headphones.' },
+        ],
+      },
+      {
+        id: 'developers',
+        title: 'For developers',
+        body: 'The voice engine is a small local server on http://127.0.0.1:5005 that the app talks to. You can script it too:',
+        code: 'GET /status                     current state, meters and devices\nGET /devices                    audio devices\nGET /set_config?pitch_shift=3   change a setting live\nGET /set_model?model=jvs        switch model (jvs, official_1, old_tts, custom:<name>)\nGET /play_sound?file_path=…     play a soundboard clip\nGET /stop_sound                 stop playback',
+      },
+    ],
+  },
+  about: {
+    label: 'About',
+    titleA: 'A voice changer',
+    titleB: 'that belongs to everyone.',
+    story: [
+      'Beatrice began with a simple frustration: good real-time AI voice changers were slow, locked behind subscriptions, or buried in complicated Python setups.',
+      'So we built a free, open-source one. Beatrice wraps the Beatrice 2 voice engine by prj-beatrice in a native app for Mac and Windows: one download, no account, and nothing sent to a server.',
+      'Around it grew an open toolkit for making voices: a dataset tool, trainers for Mac and Windows, and free cloud notebooks, so anyone can create a voice, not just use one.',
+    ],
+    principles: [
+      { title: 'Free and open', body: 'MIT licensed. Read the code, change it, ship it.' },
+      { title: 'Private by design', body: 'Everything runs on your computer. Your voice never leaves it.' },
+      { title: 'Made together', body: 'Built on the work of voice researchers, voice actors and open-source developers.' },
+    ],
+    peopleLabel: 'People',
+    peopleTitle: 'The people behind the voices.',
+    you: 'Maintainer',
+    logoNote: 'The Beatrice mark: the original logo’s star lilies, growing out of a sound wave.',
   },
 };
 

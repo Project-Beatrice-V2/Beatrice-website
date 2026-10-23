@@ -1,4 +1,4 @@
-import type { OperatingSystem } from '../types';
+export type OperatingSystem = 'macOS' | 'Windows' | 'unknown';
 
 export function detectOS(): OperatingSystem {
   if (typeof window === 'undefined') return 'unknown';
@@ -51,13 +51,7 @@ export function getDirectDownloadUrl(repoName: string, os?: 'macOS' | 'Windows')
   }
 }
 
-export function getLatestReleaseUrl(repoName: string): string {
-  return getDirectDownloadUrl(repoName);
-}
 
-export function getOrgRepoUrl(repoName: string): string {
-  return `https://github.com/Project-Beatrice-V2/${repoName}`;
-}
 
 export function getAssetUrl(path: string): string {
   if (path.startsWith('http://') || path.startsWith('https://')) return path;
