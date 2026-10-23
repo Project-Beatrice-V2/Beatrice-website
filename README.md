@@ -1,60 +1,53 @@
 <div align="center">
 
-<img src="public/beatrice-logo.png" alt="Project Beatrice V2 Logo" width="160" />
+<img src="brand/beatrice-app-icon.svg" alt="Beatrice" width="128" />
 
-# Project Beatrice V2 — Official Website & Documentation Portal
+# Beatrice — Website
 
-**The official modern web portal, documentation hub, and interactive showcase for the Project Beatrice V2 real-time neural voice conversion ecosystem.**
+**The official website for Beatrice, the free, open-source real-time AI voice changer for Mac and Windows.**
 
-[![Website Live](https://img.shields.io/badge/Website-Live_Production-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice-v2.github.io/Beatrice-website/)
+[![Website](https://img.shields.io/badge/Website-project--beatrice.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice.vercel.app/)
 [![GitHub Org](https://img.shields.io/badge/GitHub-Project--Beatrice--V2-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Project-Beatrice-V2)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
-[![Deploy to Pages](https://img.shields.io/github/actions/workflow/status/Project-Beatrice-V2/Beatrice-website/deploy.yml?branch=main&label=GitHub%20Pages&style=for-the-badge)](https://github.com/Project-Beatrice-V2/Beatrice-website/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-white.svg?style=for-the-badge)](LICENSE)
 
 </div>
 
 ---
 
-## 🌿 Overview
+## What's here
 
-This repository powers the official web application for **[Project Beatrice V2](https://github.com/Project-Beatrice-V2)**. It provides:
-- **Interactive Audio & Waveform Player**: In-browser speech synthesis and formant acoustic audition.
-- **Multilingual Support (i18n)**: Full native localization for English (`en`), 日本語 (`ja`), and 中文 (`zh`).
-- **Real-Time Module Directory**: Live GitHub stars and direct links to all Beatrice repositories.
-- **Pre-Trained Voice Models Hub**: Direct model downloads for Hugging Face and GitHub-hosted weights.
-- **Interactive Installation Steppers**: Guides for macOS (Metal/MPS), Windows (CUDA/DirectML), and Google Colab cloud workflows.
+- **Home**: a scroll-driven WebGL "voice" (three.js) that morphs from orb to waveform to ring, reacts to your microphone on request, and tells the story of how Beatrice converts a voice.
+- **Download**: per-OS downloads that always point at the latest release.
+- **Voices**: all 112 built-in voices, with names and avatars generated from the app's own model files (`scripts/build-voices.mjs`) so they match the app exactly.
+- **Guides**: install, routing to Discord/Zoom/OBS, tuning, soundboard, custom models, training, troubleshooting and the local API.
+- **About**: story, principles and contributors.
+- English, 日本語 and 中文.
+- A live total of GitHub stars across all Beatrice repositories (`api/stars.ts`, cached for an hour on Vercel).
 
----
+Design system and logo: see [`DESIGN.md`](DESIGN.md) and [`brand/`](brand/).
 
-## 🛠️ Technology Stack
+## Stack
 
-- **Framework**: React 19 + TypeScript + Vite
-- **Styling**: Tailwind CSS + Custom "Digital Archivalism" Parchment Design System
-- **Animations**: Framer Motion + GSAP ScrollTrigger + Lenis Smooth Scrolling
-- **Icons**: Lucide React
-- **Deployment**: GitHub Pages + Vercel
+React 19 · TypeScript · Vite · Tailwind CSS · three.js · GSAP ScrollTrigger · Lenis · Geist. Hosted on **Vercel**.
 
----
-
-## 🚀 Local Development
+## Develop
 
 ```bash
-# Clone repository
-git clone https://github.com/Project-Beatrice-V2/Beatrice-website.git
-cd Beatrice-website
-
-# Install dependencies
 npm install
-
-# Start local dev server
-npm run dev
-
-# Build production bundle
-npm run build
+npm run dev      # http://localhost:5173
+npm run build    # production build in dist/
 ```
 
----
+Regenerate the voice library after the app's models change:
 
-## 📜 License
+```bash
+node scripts/build-voices.mjs ../Beatrice-voicechanger-mac
+```
 
-Licensed under the [MIT License](LICENSE) — free for personal and open-source use.
+## Deploy
+
+Every push to `main` deploys to [project-beatrice.vercel.app](https://project-beatrice.vercel.app/). The old GitHub Pages address (`project-beatrice-v2.github.io/Beatrice-website/`) forwards there, keeping the page path.
+
+## License
+
+[MIT](LICENSE). Beatrice voice engine by [prj-beatrice](https://prj-beatrice.com/). JVS corpus voices are for non-commercial use only.

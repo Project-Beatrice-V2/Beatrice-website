@@ -1,8 +1,13 @@
-name: Deploy to GitHub Pages
+name: Redirect GitHub Pages to Vercel
+
+# The website is hosted on Vercel (https://project-beatrice.vercel.app).
+# This keeps the old address, https://project-beatrice-v2.github.io/Beatrice-website/,
+# working by publishing a tiny page that forwards every path to the same path on Vercel.
 
 on:
   push:
     branches: [main]
+    paths: [pages-redirect/**, .github/workflows/deploy.yml]
   workflow_dispatch:
 
 permissions:
@@ -15,35 +20,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  publish-redirect:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
-          node-version: 20
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build production bundle
-        run: npm run build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
+          path: ./pages-redirect
+      - id: deployment
         uses: actions/deploy-pages@v4

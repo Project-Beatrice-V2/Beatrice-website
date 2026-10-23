@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Use /Beatrice-website/ base path for GitHub Pages production build, and / for Vercel / local dev
-const base = process.env.NODE_ENV === 'production' && !process.env.VERCEL ? '/Beatrice-website/' : '/'
+// Served from the site root on Vercel (https://project-beatrice.vercel.app).
+const base = '/'
 
 // https://vite.dev/config/
 export default defineConfig({

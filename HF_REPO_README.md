@@ -17,11 +17,11 @@ widget:
 
 # 🌿 Project Beatrice V2 — Trump Voice Model
 
-[![Website](https://img.shields.io/badge/Website-Visit_Official_Site-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice-v2.github.io/website/)
+[![Website](https://img.shields.io/badge/Website-Visit_Official_Site-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice.vercel.app/)
 [![Hugging Face Hub](https://img.shields.io/badge/HuggingFace-SatiricalGuru%2Fbeatrice--voice--models-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/SatiricalGuru/beatrice-voice-models)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Pre-trained **Trump Voice Model** weights for **[Project Beatrice V2](https://project-beatrice-v2.github.io/website/)** — the open-source real-time neural voice conversion engine (<50ms latency).
+Pre-trained **Trump Voice Model** weights for **[Project Beatrice V2](https://project-beatrice.vercel.app/)** — the open-source real-time neural voice conversion engine (<50ms latency).
 
 ---
 
@@ -62,4 +62,4 @@ git clone https://huggingface.co/SatiricalGuru/beatrice-voice-models
 - **Hardware Acceleration**: Apple Silicon MPS (macOS) / NVIDIA CUDA & DirectML (Windows).
 - **Total Model Package**: ~19 MB complete model footprint.
 
-🌐 **[Visit the Official Project Beatrice Website →](https://project-beatrice-v2.github.io/website/)**
+🌐 **[Visit the Official Project Beatrice Website →](https://project-beatrice.vercel.app/)**
