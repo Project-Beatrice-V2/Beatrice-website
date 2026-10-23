@@ -13,7 +13,6 @@ export const en = {
     github: 'GitHub',
   },
   hero: {
-    badge: 'v2.1 for Mac: open it and go. No setup.',
     titleA: 'Become any voice.',
     titleB: 'In real time.',
     sub: 'Beatrice is a free, open-source AI voice changer for Mac and Windows. 112 voices, ultra-low latency, and everything runs privately on your computer.',
@@ -32,7 +31,6 @@ export const en = {
   },
   works: {
     label: 'Works wherever you talk',
-    apps: ['Discord', 'OBS Studio', 'Zoom', 'Twitch', 'Google Meet', 'Microsoft Teams', 'VRChat', 'Streamlabs', 'YouTube Live', 'TikTok Live', 'Fortnite', 'Valorant', 'Minecraft', 'Roblox'],
   },
   conversion: {
     label: 'Not a filter. A new voice.',

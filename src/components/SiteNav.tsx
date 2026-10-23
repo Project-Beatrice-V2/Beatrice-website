@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Star } from 'lucide-react';
 import { useCopy } from '../content';
 import { useLanguage, type SupportedLanguage } from '../context/LanguageContext';
-import { useGitHubStars } from '../hooks/useGitHubStars';
+import { useTotalStars } from '../hooks/useTotalStars';
 import { LogoMark, GithubMark } from './ui';
 import { scrollToTarget } from '../lib/motion';
 import { ORG_URL } from '../lib/downloads';
@@ -38,7 +38,7 @@ export const SiteNav: React.FC = () => {
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const stars = useGitHubStars('Project-Beatrice-V2/Beatrice-voicechanger-macos');
+  const stars = useTotalStars();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -90,7 +90,8 @@ export const SiteNav: React.FC = () => {
 
         <div className="flex items-center gap-2">
           <LanguageSwitch className="hidden md:flex" />
-          <a href={ORG_URL} target="_blank" rel="noreferrer" className="btn-ghost btn-sm hidden sm:inline-flex" aria-label="GitHub">
+          <a href={ORG_URL} target="_blank" rel="noreferrer" className="btn-ghost btn-sm hidden sm:inline-flex"
+            aria-label={stars !== null ? `GitHub: ${stars} stars across Beatrice repositories` : 'GitHub'} title="Stars across all Beatrice repositories">
             <GithubMark />
             {stars !== null && (
               <span className="flex items-center gap-1 font-mono text-[12px] text-fg-2">

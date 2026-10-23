@@ -13,7 +13,6 @@ export const zh: Copy = {
     github: 'GitHub',
   },
   hero: {
-    badge: 'Mac 版 v2.1：打开即用，无需设置',
     titleA: '成为任何声音。',
     titleB: '实时变声。',
     sub: 'Beatrice 是一款免费、开源的 AI 变声器，支持 Mac 和 Windows。112 种声音，超低延迟，所有处理都在你的电脑本地完成。',
@@ -32,7 +31,6 @@ export const zh: Copy = {
   },
   works: {
     label: '在你说话的任何地方都能用',
-    apps: ['Discord', 'OBS Studio', 'Zoom', 'Twitch', 'Google Meet', 'Microsoft Teams', 'VRChat', 'Streamlabs', 'YouTube Live', 'TikTok Live', 'Fortnite', 'Valorant', 'Minecraft', 'Roblox'],
   },
   conversion: {
     label: '不是滤镜，是一个新的声音。',

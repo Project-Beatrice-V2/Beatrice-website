@@ -13,7 +13,6 @@ export const ja: Copy = {
     github: 'GitHub',
   },
   hero: {
-    badge: 'Mac版 v2.1：開くだけ。セットアップ不要',
     titleA: 'どんな声にも、なれる。',
     titleB: 'リアルタイムで。',
     sub: 'Beatriceは、MacとWindowsで使える無料・オープンソースのAIボイスチェンジャーです。112種類の声、超低遅延。すべての処理があなたのパソコンの中だけで完結します。',
@@ -32,7 +31,6 @@ export const ja: Copy = {
   },
   works: {
     label: '声を使うあらゆる場所で',
-    apps: ['Discord', 'OBS Studio', 'Zoom', 'Twitch', 'Google Meet', 'Microsoft Teams', 'VRChat', 'Streamlabs', 'YouTube Live', 'TikTok Live', 'Fortnite', 'Valorant', 'Minecraft', 'Roblox'],
   },
   conversion: {
     label: 'フィルターではなく、新しい声。',

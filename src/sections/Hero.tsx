@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mic, MicOff, ArrowRight } from 'lucide-react';
+import { Mic, MicOff } from 'lucide-react';
 import { useCopy } from '../content';
 import { RevealLines, FadeIn, AppleIcon, WindowsIcon } from '../components/ui';
 import { useMicLevel } from '../hooks/useMicLevel';
@@ -36,13 +35,6 @@ export const Hero: React.FC = () => {
     <section id="hero" className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center overflow-hidden pb-24 pt-32"
       {...sceneAttr({ morph: 0, chaos: 0.6, y: 0.2, z: 8.2, opacity: 1 })}>
       <div className="shell relative flex flex-col items-center text-center">
-        <FadeIn immediate delay={0.1}>
-          <Link to="/download" className="chip mb-8 bg-black/50 backdrop-blur-md hover:border-white/25 hover:text-white">
-            <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-live" />
-            {c.hero.badge}
-            <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
-        </FadeIn>
 
         <RevealLines
           as="h1"
