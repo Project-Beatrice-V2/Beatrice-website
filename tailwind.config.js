@@ -17,7 +17,7 @@ export default {
         fg: {
           DEFAULT: '#FFFFFF',
           2: '#A1A1AA',
-          3: '#6B6B76',
+          3: '#82828E',
         },
         hairline: 'rgba(255,255,255,0.10)',
         'hairline-strong': 'rgba(255,255,255,0.18)',

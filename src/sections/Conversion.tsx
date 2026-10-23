@@ -48,7 +48,7 @@ export const Conversion: React.FC = () => {
             {steps.map((s) => (
               <li key={s.k}>
                 <div className="font-mono text-[12px] text-fg-3">{s.k}</div>
-                <h3 className="display mt-3 text-[48px]">{s.title}</h3>
+                <h2 className="display mt-3 text-[48px]">{s.title}</h2>
                 <p className="mt-4 max-w-md text-[17px] leading-relaxed text-fg-2">{s.body}</p>
               </li>
             ))}
@@ -78,7 +78,7 @@ export const Conversion: React.FC = () => {
                 {steps.map((s, i) => (
                   <div key={s.k} className="beat absolute inset-0" style={i > 0 ? { opacity: 0, visibility: 'hidden' } : undefined}>
                     <div className="font-mono text-[12px] text-fg-3">{s.k} / {String(steps.length).padStart(2, '0')}</div>
-                    <h3 className="display mt-4 text-[calc(var(--display-scale)*clamp(44px,5.6vw,84px))]">{s.title}</h3>
+                    <h2 className="display mt-4 text-[calc(var(--display-scale)*clamp(44px,5.6vw,84px))]">{s.title}</h2>
                     <p className="mt-6 max-w-md text-[17px] leading-relaxed text-fg-2">{s.body}</p>
                   </div>
                 ))}

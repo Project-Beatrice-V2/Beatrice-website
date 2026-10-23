@@ -24,7 +24,7 @@ One system for the website and the Mac/Windows apps.
 | `hairline-strong` | `rgba(255,255,255,0.18)` | Hover borders |
 | `text` | `#FFFFFF` | Primary text |
 | `text-2` | `#A1A1AA` | Body/secondary |
-| `text-3` | `#6B6B76` | Metadata, captions |
+| `text-3` | `#82828E` | Metadata, captions |
 | `signal` | `#7C8CFF` | The single UI accent: focus rings, active states, small icons. Rationed. |
 | `live` | `#3DFFA8` | "LIVE" state only (app power button, live dots) |
 | `aurora` | `#000 → #112D72 → #4B52AA → #A887DC → #E6C4E7 → #FCDBEF` | Hero atmosphere & 3D scene only. Never on buttons. |
