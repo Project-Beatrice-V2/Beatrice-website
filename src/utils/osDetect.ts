@@ -40,7 +40,7 @@ export function getDirectDownloadUrl(repoName: string, os?: 'macOS' | 'Windows')
       return 'https://github.com/Project-Beatrice-V2/Beatrice-dataset-webui-windows/archive/refs/heads/main.zip';
     case 'Beatrice-voice-models':
     case 'SatiricalGuru/beatrice-voice-models':
-      return 'https://github.com/Project-Beatrice-V2/Beatrice-voice-models/archive/refs/heads/main.zip';
+      return 'https://github.com/Project-Beatrice-V2/Beatrice-voice-models/raw/main/downloads/trump.zip';
     case 'Beatrice-colab':
       return 'https://github.com/Project-Beatrice-V2/Beatrice-colab/archive/refs/heads/main.zip';
     default:
