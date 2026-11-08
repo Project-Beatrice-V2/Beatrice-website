@@ -13,7 +13,7 @@ The official website for **Beatrice**, the free, open-source real-time AI voice 
 
 [![Website](https://img.shields.io/badge/project--beatrice.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://project-beatrice.vercel.app/)
 [![Total stars](https://img.shields.io/endpoint?url=https%3A%2F%2Fproject-beatrice.vercel.app%2Fapi%2Fstars%3Fformat%3Dshields&style=for-the-badge&label=%E2%98%85%20total%20stars)](https://github.com/Project-Beatrice-V2)
-[![Vercel deploy](https://img.shields.io/github/checks-status/Project-Beatrice-V2/Beatrice-website/main?style=for-the-badge&logo=vercel&logoColor=white&label=vercel&labelColor=000000)](https://project-beatrice.vercel.app/)
+[![CI](https://github.com/Project-Beatrice-V2/Beatrice-website/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Project-Beatrice-V2/Beatrice-website/actions/workflows/ci.yml) [![CodeQL](https://github.com/Project-Beatrice-V2/Beatrice-website/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/Project-Beatrice-V2/Beatrice-website/actions/workflows/codeql.yml) [![PR policy](https://github.com/Project-Beatrice-V2/Beatrice-website/actions/workflows/pr-policy.yml/badge.svg?event=pull_request)](https://github.com/Project-Beatrice-V2/Beatrice-website/actions/workflows/pr-policy.yml)
 [![License](https://img.shields.io/badge/license-MIT-white?style=for-the-badge&labelColor=000000)](LICENSE)
 
 **[Website](https://project-beatrice.vercel.app/)** · **[Download](https://project-beatrice.vercel.app/download)** · **[All 112 voices](https://project-beatrice.vercel.app/voices)** · **[Guides](https://project-beatrice.vercel.app/docs)** · **[About](https://project-beatrice.vercel.app/about)**
@@ -235,3 +235,7 @@ Made with care by [Jatin Pandey (SatiricalGuru)](https://github.com/satiricalgur
 ⭐ **If Beatrice made you sound like someone new, give it a star.**
 
 </div>
+
+## Repository automation
+
+See the [organization automation guide](https://github.com/Project-Beatrice-V2/.github/blob/main/docs/automation.md) for checks, contribution policies, and integration setup.
