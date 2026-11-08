@@ -7,7 +7,9 @@ export const config = { runtime: 'edge' };
 const REPOS = ['satiricalguru/Beatrice-voicechanger-mac', 'satiricalguru/Beatrice-voicechanger-windows'];
 const ORG = 'Project-Beatrice-V2';
 
-async function gh(path: string, token?: string) {
+type GitHubRepository = { full_name: string; stargazers_count: number };
+
+async function gh<T>(path: string, token?: string): Promise<T> {
   const res = await fetch(`https://api.github.com/${path}`, {
     headers: {
       Accept: 'application/vnd.github+json',
@@ -16,7 +18,7 @@ async function gh(path: string, token?: string) {
     },
   });
   if (!res.ok) throw new Error(`GitHub ${res.status} for ${path}`);
-  return res.json();
+  return res.json() as Promise<T>;
 }
 
 export default async function handler(req?: Request): Promise<Response> {
@@ -24,10 +26,10 @@ export default async function handler(req?: Request): Promise<Response> {
   const token = (globalThis as { process?: { env?: Record<string, string | undefined> } }).process?.env?.GITHUB_TOKEN;
   try {
     const [repos, orgRepos] = await Promise.all([
-      Promise.all(REPOS.map((r) => gh(`repos/${r}`, token))),
-      gh(`orgs/${ORG}/repos?per_page=100&type=public`, token),
+      Promise.all(REPOS.map((r) => gh<GitHubRepository>(`repos/${r}`, token))),
+      gh<GitHubRepository[]>(`orgs/${ORG}/repos?per_page=100&type=public`, token),
     ]);
-    const all = [...repos, ...orgRepos] as { full_name: string; stargazers_count: number }[];
+    const all = [...repos, ...orgRepos];
     const unique = new Map(all.map((r) => [r.full_name, r.stargazers_count]));
     const total = [...unique.values()].reduce((a, b) => a + b, 0);
     const body = shields
